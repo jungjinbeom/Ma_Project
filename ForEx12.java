@@ -1,6 +1,8 @@
 import java.util.Scanner;
 class ForEx12
 {
+
+	이학송 : 아무말 대잔치.
 	public static void main(String[] args) 
 	{
 				
