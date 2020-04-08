@@ -8,7 +8,7 @@ public class Join {
 	public Join() {
 		
 	}
-
+//변경한다
 
 	public static void joinData(String id, String pw) {
 		Set<String> keySetList = joinData.keySet();
