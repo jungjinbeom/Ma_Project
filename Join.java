@@ -10,6 +10,7 @@ public class Join {
 	}
 //변경한다
 //한번 더 변경한다
+//또 변경한다
 
 	public static void joinData(String id, String pw) {
 		Set<String> keySetList = joinData.keySet();
