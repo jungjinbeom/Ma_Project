@@ -43,7 +43,7 @@ class Array03
 			
 					
 		}
-		
+		/////test..............
 			data[row][4]=data[row][3] /3;
 
 		}
