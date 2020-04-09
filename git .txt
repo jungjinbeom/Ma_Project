@@ -1,0 +1,3 @@
+1. 백업 병적으로 하자.
+2. 커밋하기 전에, 연락해서 master 에서 나와라.
+3. merge하기 전에 무조건 master git pull을 한 뒤에 merge를 해라.
