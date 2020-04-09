@@ -4,3 +4,4 @@
 2. 내 브랜치에 있는 파일 복사->붙여넣기로 백업 해두기.
 3. 내 브랜치에 있는 파일 수정 후 add->commit->push 하기.
 4. git checkout master로 브렌치 변경 후 git merge 하기.
+asdasdsa
