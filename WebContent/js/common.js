@@ -32,4 +32,19 @@ $(function(){
             $(this).parents('.modal').addClass('hidden');
         });
     });
+
+    $('input.number-only').on('keyup', function(){
+        $(this).val($(this).val().replace(/[^0-9]/g,""));
+    });
+    // var datepickerYMD = {
+    //     dateFormat: 'yy-mm-dd'
+    // }
+
+    // var datepickerYM = {
+    //     dateFormat: 'yy-mm'
+    // }
+
+    // $('.datepicker-ymd').datepicker(datepickerYMD);
+    // $('.datepicker-ym').datepicker(datepickerYM);
+
 });
