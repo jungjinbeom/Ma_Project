@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-	<title>ChariTree 마이페이지</title>
+	<title>ChariTree 후원 목록</title>
 	<!--공통 라이브러리-->
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
@@ -60,97 +60,104 @@
 			
 			<ul class="flex">
 			  <li class="flex-1 mr-2">
-			    <a class="text-center block border border-blue-500 rounded py-2 px-4 bg-info-dark hover:bg-info-dark text-white" href="/project_Ma/mypage/mypage.html">내 정보</a>
+			    <a class="text-center block border border-blue-500 rounded py-2 px-4 bg-info-dark hover:bg-info-dark text-white" href="#">법인 정보</a>
 			  </li>
 			  <li class="flex-1 mr-2">
-			    <a class="text-center block border border-blue-500 rounded py-2 px-4 bg-info hover:bg-info-dark text-white" href="/project_Ma/mypage/mypageSpon.html">후원 목록</a>
-			  </li>
-			  <li class="flex-1 mr-2">
-			    <a class="text-center block border border-blue-500 rounded py-2 px-4 bg-info hover:bg-info-dark text-white" href="/project_Ma/mypage/mypageWishList.html">위시 리스트</a>
+			    <a class="text-center block border border-blue-500 rounded py-2 px-4 bg-info hover:bg-info-dark text-white" href="/project_Ma/mypage/campainControlPage.html">캠페인 관리</a>
 			  </li>
 			 </ul>
-		 
-		 
 		 	 
-		
-		 <div id="myInformation" ><!-- 내정보 탭-->
-		 	 
-		 <h1 class="text-3xl">내 정보</h1>
+		 
+		 <div id="myInformation" class="tab-content"><!-- 내정보 탭-->
+		 <h1 class="text-3xl">법인 정보</h1>
 	 		<div id="hr"></div>
-	 		
-		 <!-- 이름 -->
-		  	<div class="md:flex md:items-center mb-6 ">
-		  <!-- username -->
+		 <!-- 법인명 -->
+		  	<div class="md:flex md:items-center mb-6">
+		  <!-- corporate -->
 			    <div class="md:w-1/4">
-			      	<label class="block text-black font-bold  text-right mb-1 md:mb-0 pr-4" for="inline-full-name">이름</label>
+			      	<label class="block text-black font-bold  text-right mb-1 md:mb-0 pr-4" for="inline-full-name">법인명</label>
 			    </div>
-			    <!-- username textbox -->
+			    <!-- corporate textbox -->
 			    <div class="md:w-1.5/4">
-			     	<input class="bg-gray-200 appearance-none border-2 border-info rounded  py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-info-dark" id="inline-full-name" type="text" >
+			     	<input class="bg-grayappearance-none border-2 border-info rounded  py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-info-dark" id="inline-full-name" type="text" >
 			    </div>
 		  	</div>
-		 <!-- 아이디 -->
+		  
+		
+		  <!-- 법인 등록번호 --> 
 		<div class="md:flex md:items-center mb-6">
-		  <!-- ID -->
+		  <!-- corporateNumber -->
 		    <div class="md:w-1/4">
-		      <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">ID</label>
+		      <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">법인 등록번호</label>
 		    </div>
-		    <!-- ID textbox -->
+		    <!-- corporateNumber textbox -->
+		    <div class="md:w-1/4">
+		      <input class="bg-gray-200 appearance-none border-2 border-info rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-info-dark" id="inline-full-name" type="text" >
+		    </div>
+		   
+		  </div>
+		
+		 <!-- 법인 E-mail --> 
+		<div class="md:flex md:items-center mb-6">
+		  <!-- corporateE-mail -->
+		    <div class="md:w-1/4">
+		      <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">E-MAIL</label>
+		    </div>
+		    <!-- corporateE-mail textbox -->
 		    <div class="md:w-1/4">
 		      <input class="bg-gray-200 appearance-none border-2 border-info rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-info-dark" id="inline-full-name" type="text" >
 		    </div>
 		   
 		  </div>
 		  
-		  <!-- 비밀번호 -->
+		  <!-- 법인 아이디 -->
 		<div class="md:flex md:items-center mb-6">
-		  <!-- password -->
+		  <!-- corporateID-->
 		    <div class="md:w-1/4">
-		      <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">비밀번호</label>
+		      <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">ID</label>
 		    </div>
-		    <!-- PW textbox -->
+		    <!-- corporateID textbox -->
 			    <div class="md:w-1/4">
-			      <input class="bg-gray-200 appearance-none border-2 border-info rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-info-dark" id="inline-full-name" type="password" placeholder="********" >
+			      <input class="bg-gray-200 appearance-none border-2 border-info rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-info-dark" id="inline-full-name" type="text">
 			    </div>
-		    <!-- button -->
+		   
+		  </div>
+		    
+		 <!--법인 Password -->
+		<div class="md:flex md:items-center mb-6">
+		  <!-- corporatePassword -->
+			    <div class="md:w-1/4">
+			      <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">비밀번호</label>
+			    </div>
+		    <!-- corporatePassword textbox -->
+			    <div class="md:w-1/4">
+			      <input class="bg-gray-200 appearance-none border-2 border-info rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-info-dark " id="inline-full-name" type="password" >
+			    </div>
+			     <!-- button -->
 			    <div id="usernameButton">
 				    <button onclick ="window.open('Password.html','passwordUpdate','width=800,height=400,location=no,status=no,scrollbars=no')"class="bg-info hover:bg-info-dark text-white font-bold py-2 px-4 rounded">
 					변경여부
 					</button>
 			    </div>
-		  </div>
-		    
-		 <!-- 이메일 -->
-		<div class="md:flex md:items-center mb-6">
-		  <!-- email -->
-			    <div class="md:w-1/4">
-			      <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">E-mail</label>
-			    </div>
-		    <!-- email textbox -->
-			    <div class="md:w-1/4">
-			      <input class="bg-gray-200 appearance-none border-2 border-info rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-info-dark " id="inline-full-name" type="text" >
-			    </div>
-			  
 			    
 		  </div>
-			<!-- 연락처 -->
+			<!-- 법인전화번호 -->
 			<div class="md:flex md:items-center mb-6">
-		  <!-- CellPhone -->
+		  <!-- corporatePhoneNumber -->
 			    <div class="md:w-1/4">
-			      <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">휴대전화번호</label>
+			      <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">법인전화번호</label>
 			    </div>
-			    <!-- CellPhone textbox -->
+			    <!-- corporatePhoneNumber textbox -->
 			    <div class="md:w-1/4">
 			      <input class="bg-gray-200 appearance-none border-2 border-info rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-info-dark" id="inline-full-name" type="text">
 			    </div>
 		  </div>
 		  
 		  <!-- 주소 -->
-		
 		  <div class="md:flex md:items-center mb-6">
 		  <!-- address label -->
 		  	<div class="md:w-1/4">
-			  <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-12 pr-4" for="inline-full-name">주소</label>
+			  <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-12 pr-4" for="inline-full-name">법인주소</label>
 			 </div>
 			<!-- Address textbox -->
 			<div id="address">
@@ -216,7 +223,7 @@
 					<input class="appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" name="search_text" placeholder="검색" aria-label="Full name">
 					<button class="flex-shrink-0 text-white py-1 px-2" id="searchSubmit"><i class="xi-search"></i></button>
 				</div>
-			</form><!--<li class="menu-item text-center flex items-center"><a href="#" data-target="#searchModal" id="search-ico" class="inline-block py-8 px-4"><i class="xi-search"></i></a></li>  -->
+			</form>
 		</div>
 	</div>
 </body>
