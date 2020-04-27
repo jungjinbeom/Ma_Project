@@ -36,15 +36,19 @@ $(function(){
     $('input.number-only').on('keyup', function(){
         $(this).val($(this).val().replace(/[^0-9]/g,""));
     });
-    // var datepickerYMD = {
-    //     dateFormat: 'yy-mm-dd'
-    // }
 
-    // var datepickerYM = {
-    //     dateFormat: 'yy-mm'
-    // }
+    /* 후원 상세페이지 */
+    $('.campaign-tab-nav .tab-item a').on('click', function(e){
+        e.preventDefault();
+        $('.campaign-tab-nav .tab-item').removeClass('active');
+        $('.campaign-tab-content .tab-content-item').removeClass('active');
 
-    // $('.datepicker-ymd').datepicker(datepickerYMD);
-    // $('.datepicker-ym').datepicker(datepickerYM);
+        $(this).parent().addClass('active');
+        $($(this).attr('href')).addClass('active');
+    });
 
+    $('a.qna-title').on('click', function(e){
+        e.preventDefault();
+        $($(this).attr('href')).toggleClass('hidden');
+    });
 });

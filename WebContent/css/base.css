@@ -1,3 +1,5 @@
+input[type=submit]{cursor: pointer;}
+
 #site-navigation>.nav-menu>.menu-item{
     border-bottom-style: solid;
     border-bottom-width: 2px;
@@ -26,7 +28,6 @@
 
 /*jquery datepicker*/
  .ui-datepicker.ui-widget.ui-widget-content {
-	/*font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;*/
     padding: 0.5rem;
     background: #fff;
 	border: 1px solid #716f6e;
@@ -124,9 +125,8 @@
 
 .ui-datepicker td a{
     display: block;
-    padding: .25rem .5rem;
+    padding: .5rem;
     margin: 0;
-    
     border-radius: 50%;
 }
 
@@ -138,7 +138,10 @@
 	color: #222020;
 	font-size: 1rem;
 }
-
+.ui-datepicker.ui-widget-content .ui-state-disabled .ui-state-default{
+    display: block;
+    padding: 0.5rem;
+}
 .ui-datepicker.ui-widget-content td .ui-state-active,
 .ui-datepicker.ui-widget-content td .ui-state-hover {
     background: #cb0802;
@@ -149,8 +152,69 @@
 	opacity: 1;
 }
 
- .ui-state-disabled .ui-state-default {
-	color: #fba49e;
+/*캠페인 상세*/
+.progress{
+	height: 6px;
 }
 
- 
+.campaign-tab-nav>ul>.tab-item{
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: transparent;
+    transition: all .4s;
+}
+
+.campaign-tab-nav>ul>.tab-item.active,
+.campaign-tab-nav>ul>.tab-item:hover{
+    color: #cb0802;
+    border-bottom-color: #cb0802;
+}
+
+.campaign-tab-content .tab-content-item{
+    display: none;
+}
+
+.campaign-tab-content .tab-content-item.active{
+    display: block;
+}
+
+.campaign-tab-content #story p,
+.campaign-tab-content #updates .update-content p{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#updates .campaign-update{
+    padding-left: 38px !important;
+    border-left: 3px solid #e7e7e7;
+}
+
+#updates .campaign-update span.round-circle {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #e7e7e7;
+    display: block;
+    margin-left: -50px;
+    transition: 400ms;
+    -webkit-transition: 400ms;
+}
+
+#updates .campaign-update li:hover span.round-circle{
+    background: #cb0802;
+}
+
+.rewards .reward-item .overlay .donate-this{
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.rewards .reward-item .overlay:hover{
+    opacity: 0.9;
+}

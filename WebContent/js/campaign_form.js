@@ -1,3 +1,5 @@
+	
+
 $(function(){
 	var now = new Date();
 	var nowYear = now.getFullYear();
@@ -28,19 +30,20 @@ $(function(){
 
 		var num = $(this).data('number');
 		var fieldset = $('#reward-fieldset-'+num).clone(true);
-		
+		fieldset.find('input, select, textarea').val('');
 		$('#reward-fieldset-'+ num).after(fieldset);
 
 		setFieldsetNumber();
 	});
 
 	$(document).on('click', '.remove-reward-row', function(e){
+
 		e.preventDefault();
 
 		var num = $(this).data('number');
 		$('#reward-fieldset-'+num).remove();
-		
 		setFieldsetNumber();
+		
 	});
 
 	function setFieldsetNumber(){
@@ -48,12 +51,13 @@ $(function(){
 		var fieldsetLength = $('.reward-fieldset').length;
 		console.log(fieldsetLength);
 		if(fieldsetLength == 1){
-			$('button[data-number=1]').remove();
+			console.log($('.remove-reward-row'));
+			$('.remove-reward-row').remove();
 		}
 
 		$('.reward-fieldset').each(function(){
 			var fieldset = $(this);
-			var removeBtn = $('<button data-number="1" class="remove-reward-row bg-gray hover:bg-gray-dark text-white text-sm py-1 px-2 ml-2 rounded">리워드 삭제 <i class="xi-minus"></i></button>');
+			var removeBtn = '<button data-number="'+idx+'" class="remove-reward-row bg-gray hover:bg-gray-dark text-white text-sm py-1 px-2 ml-2 rounded">리워드 삭제 <i class="xi-minus"></i></button>';
 
 			fieldset.attr('id', 'reward-fieldset-'+idx);
 			fieldset.attr('data-number', idx);
