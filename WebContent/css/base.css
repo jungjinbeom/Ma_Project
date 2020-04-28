@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 input[type=submit]{cursor: pointer;}
 
+=======
+>>>>>>> project_J
 #site-navigation>.nav-menu>.menu-item{
     border-bottom-style: solid;
     border-bottom-width: 2px;
@@ -24,6 +27,7 @@ input[type=submit]{cursor: pointer;}
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+<<<<<<< HEAD
 }
 
 /*jquery datepicker*/
@@ -218,3 +222,6 @@ input[type=submit]{cursor: pointer;}
 .rewards .reward-item .overlay:hover{
     opacity: 0.9;
 }
+=======
+}
+>>>>>>> project_J
