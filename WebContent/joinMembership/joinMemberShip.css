@@ -34,7 +34,7 @@ input[type=checkbox]+ label:before {
     border:1px rgb(0,162,232) solid;
     box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);  
 }
-input[type=checkbox]:checked + label:after { 
+input[type=checkbox]:checked + label:before { 
 
     content: "\2713";  /* 체크모양 */
     text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);  

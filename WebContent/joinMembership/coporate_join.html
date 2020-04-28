@@ -21,6 +21,10 @@
 	<link rel="stylesheet" href="/project_Ma/joinMembership/joinMemberShip.css" type="text/css"/><!-- myPage.css -->
 	
 </head>
+<script>
+
+
+</script>
 <body>
 	<div class="page">
 		<!--헤더(메뉴)-->
@@ -55,23 +59,23 @@
 					
 				    <div id="joinMemberShiptext">
 				    	  <h3 id="subText2">법인 정보</h3><br/>
-					      <input class="shadow appearance-none border-gray-dark  w-5/6 py-3 px-4 text-black leading-tight focus:outline-none focus:shadow-outline"  type="text" placeholder="사업자등록번호">
-					      <button id="joinMembershipCheckBtn" class="bg-info hover:bg-info-dark text-white font-bold py-2 px-4 rounded">
-							중복체크
-						  </button><br/>
+					      <input class="shadow appearance-none border-gray-dark  w-5/6 py-3 px-4 text-black leading-tight focus:outline-none focus:shadow-outline"  type="text" maxlength="10" placeholder="사업자등록번호">
+					      <input type="submit" value="중복체크"id="joinMembershipCheckBtn" class="bg-danger hover:bg-danger-dark text-white font-bold py-2 px-4 rounded">
+							
+						  <br/>
 					 </div>
 					 <div id="joinMemberShiptext">
 			      		<input class="shadow appearance-none border-gray-darker  w-5/6 py-3 px-4 text-black leading-tight focus:outline-none focus:shadow-outline"  type="text" placeholder="법인명"><br/>
 			  		</div>
 			  		<div id="joinMemberShiptext">
-			      		<input class="shadow appearance-none border-gray-darker  w-5/6 py-3 px-4 text-black leading-tight focus:outline-none focus:shadow-outline"  type="text" placeholder="법인등록번호(13자리)"><br/>
+			      		<input class="shadow appearance-none border-gray-darker  w-5/6 py-3 px-4 text-black leading-tight focus:outline-none focus:shadow-outline"  type="text" maxlength="13" placeholder="법인등록번호(13자리)"><br/>
 			  		</div>
 					<div id="joinMemberShipText2">
 			      		<h3 id="subText2">계정 정보</h3><br/>
 			      		<input class="shadow appearance-none border-gray-dark  w-5/6 py-3 px-4 text-black leading-tight focus:outline-none focus:shadow-outline"  type="text" placeholder="이메일">
-			      		<button id="joinMembershipCheckBtn" class="bg-info hover:bg-info-dark text-white font-bold py-2 px-4 rounded">
-							인증하기
-						</button><br/>
+			      		<input type="submit" value="인증하기"id="joinMembershipCheckBtn" class="bg-danger hover:bg-danger-dark text-white font-bold py-2 px-4 rounded">
+						
+							<br/>
 						<label id="subText">위 이메일로 인증번호가 발송됩니다.</label><br/>
 			      	</div>
 			      	<div id="joinMemberShiptext">
@@ -82,9 +86,9 @@
 			      		<label id="subText">영문, 숫자, 특수문자 (!@#$%^&*+=-)를 조합한 8자 이상</label><br/>
 			      	</div>
 			      	<div>
-			      		<button id="completeBtn" class="bg-info w-5/6 hover:bg-info-dark text-white font-bold py-2 px-4 rounded">
-			      		완료
-			      		</button>
+			      		<input type="submit" value="가입하기" id="completeBtn" class="bg-danger w-5/6 hover:bg-danger-dark text-white font-bold py-2 px-4 rounded">
+			      	
+			      		
 			      	</div>
 			    </div>
 			</div><!--회원가입 폼   -->
@@ -129,8 +133,8 @@
 		</div> 
 		<!-- 약관동의 모달창 -->
 
-		<div id="agreementModal" class="modal w-full h-screen bg-black opacity-100 fixed top-0 hidden m-0 m-auto">
-			<div class="bg-white h-auto w-2/5 m-0 m-auto">
+		<form id="agreementModal" class="modal w-full h-screen bg-black opacity-100 fixed top-0 hidden m-0 m-auto">
+			<div class="bg-white mt-32 h-auto w-1/5 m-0 m-auto">
 			<div class="close text-black inline-block text-xl top-0 left-0 p-4 cursor-pointer"><i class="xi-close"></i></div><br/>
 				<div class="ml-8">
 				<label class="text-3xl font-bold">약관동의</label>
@@ -142,26 +146,31 @@
 					<input type="checkbox" id="allAgreement" >
 					<label class="mt-8 text-gray">체리트리 서비스 이용약관(필수)</label><br/>
 					
-					<h6 class="mt-6 text-gray">회원약관</h6><br/>
-					<h6 class="text-gray">펀딩 서비스 이용약관</h6>
+					<div class="mt-6 text-gray">회원약관
+						<input value="내용보기" onclick="if(this.parentNode.getElementsByTagName('div')[0].style.display != ''){this.parentNode.getElementsByTagName('div')[0].style.display = '';this.value = '내용닫기';}else{this.parentNode.getElementsByTagName('div')[0].style.display = 'none'; this.value = '내용보기';}" type="button"id="ajaxButton"class="-mt-24 ml-40  text-xs" />
+						<div id="txtDiv" class="background-gray w-full" style="display:none;overflow:scroll;height:50px;overflow-x:hidden;"></div>
+					</div><br/>
+						
+					<div class="text-gray">펀딩 서비스 이용약관
+						<input value="내용보기" onclick="if(this.parentNode.getElementsByTagName('div')[0].style.display != ''){this.parentNode.getElementsByTagName('div')[0].style.display = '';this.value = '내용닫기';}else{this.parentNode.getElementsByTagName('div')[0].style.display = 'none'; this.value = '내용보기';}" type="button"id="ajaxButton2"class="ml-20 text-xs" />
+						<div id="txtDiv2" class="background-gray w-full" style="display:none;overflow:scroll;height:50px;overflow-x:hidden"></div>
+					</div>
 					
-			   
-					<input type="checkbox" id="allAgreement">
-					<label class="mt-8 text-gray" for="allAgreement" id="allAgreementText2">개인정보 수집 및 이용동의(필수)</label><br/>
-					
+					<div>			   
+						<input type="checkbox" id="allAgreement"><label class="mt-8 text-gray" for="allAgreement" id="allAgreementText2">개인정보 수집 및 이용동의(필수)</label>
+						<input value="내용보기"  class="text-gray text-xs"onclick="if(this.parentNode.getElementsByTagName('div')[0].style.display != ''){this.parentNode.getElementsByTagName('div')[0].style.display = '';this.value = '내용닫기';}else{this.parentNode.getElementsByTagName('div')[0].style.display = 'none'; this.value = '내용보기';}" type="button"id="ajaxButton3" />
+						<div id="txtDiv3" class="text-gray background-gray w-full" style="display:none;overflow:scroll;height:50px;overflow-x:hidden;"></div>
+						<br/>
+					</div>
 					<input type="checkbox" id="allAgreement">
 					<label class="mt-8 mb-8 text-gray"for="allAgreement" id="allAgreementText2">마케팅 정보 및 수신(선택)</label><br/>
 					
-					<button id="completeBtn" class="bg-info w-5/6 hover:bg-info-dark text-white font-bold py-2 px-4 rounded ml-3 ">
-			      		확인
-			      	</button>
-					
-					
-				</div>
-				
+					<input type="submit" value="확인" id="completeBtn" class="bg-danger w-5/6 hover:bg-danger-dark text-white font-bold py-2 px-4 rounded ml-3 ">
+			     				
+					</div>
 				</div>
 			</div>
-		</div>		
+		</form>		
 	
 		
 		</div>	
