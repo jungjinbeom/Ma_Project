@@ -38,6 +38,11 @@ $(function(){
     });
 
     /* 후원 상세페이지 */
+    $('a.add-wishlist').on('click', function(e){
+        e.preventDefault();
+        $(this).toggleClass('added-this');
+    });
+
     $('.campaign-tab-nav .tab-item a').on('click', function(e){
         e.preventDefault();
         $('.campaign-tab-nav .tab-item').removeClass('active');
