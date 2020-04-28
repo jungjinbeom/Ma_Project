@@ -32,7 +32,6 @@ $(function(){
             $(this).parents('.modal').addClass('hidden');
         });
     });
-<<<<<<< HEAD
 
     $('input.number-only').on('keyup', function(){
         $(this).val($(this).val().replace(/[^0-9]/g,""));
@@ -57,6 +56,4 @@ $(function(){
         e.preventDefault();
         $($(this).attr('href')).toggleClass('hidden');
     });
-=======
->>>>>>> project_J
 });
