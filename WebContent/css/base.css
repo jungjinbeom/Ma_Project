@@ -1,5 +1,4 @@
 input[type=submit]{cursor: pointer;}
-
 #site-navigation>.nav-menu>.menu-item{
     border-bottom-style: solid;
     border-bottom-width: 2px;
@@ -217,4 +216,13 @@ input[type=submit]{cursor: pointer;}
 
 .rewards .reward-item .overlay:hover{
     opacity: 0.9;
+}
+
+.add-wishlist .wishlist-ico::after{
+    font-family: xeicon;
+    content: "\ea11";
+}
+.add-wishlist.added-this .wishlist-ico::after{
+    color: #cb0802;
+    content: "\ea10";
 }
