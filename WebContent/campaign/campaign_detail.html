@@ -81,16 +81,16 @@
 						</div>
 						<div class="share text-2xl text-gray-darker my-4 text-right">
 							<div class="inline-block w-10 h-10 leading-10 text-center mr-2"><i class="xi-share-alt"></i></div>
-							<a href="#" title="페이스북에 공유하기" class="inline-block w-10 h-10 leading-10 text-center bg-white border border-gray rounded-full opacity-75 hover:opacity-100 duration-300"><i class="xi-facebook"></i></a>
-							<a href="#" title="카카오톡에 공유하기" class="inline-block w-10 h-10 leading-10 text-center bg-white border border-gray rounded-full opacity-75 hover:opacity-100 duration-300"><i class="xi-kakaotalk"></i></a>
-							<a href="#" title="트위터에 공유하기" class="inline-block w-10 h-10 leading-10 text-center bg-white border border-gray rounded-full opacity-75 hover:opacity-100 duration-300"><i class="xi-twitter"></i></a>
-							<a href="#" title="URL 복사" class="inline-block w-10 h-10 leading-10 text-center bg-white border border-gray rounded-full opacity-75 hover:opacity-100 duration-300"><i class="xi-link"></i></a>
+							<a href="#" title="페이스북에 공유하기" class="inline-block w-8 h-10 leading-10 text-center hover:text-brand duration-300"><i class="xi-facebook"></i></a>
+							<a href="#" title="카카오톡에 공유하기" class="inline-block w-8 h-10 leading-10 text-center hover:text-brand duration-300"><i class="xi-kakaotalk"></i></a>
+							<a href="#" title="트위터에 공유하기" class="inline-block w-8 h-10 leading-10 text-center hover:text-brand duration-300"><i class="xi-twitter"></i></a>
+							<a href="#" title="URL 복사" class="inline-block w-8 h-10 leading-10 text-center hover:text-brand duration-300"><i class="xi-link"></i></a>
 						</div>
 					</div>
 				</div><!-- 상단 -->
 				<div class="w-full flex items-start content-start"><!-- 본문 -->
 					<div class="bg-white w-3/4 mt-4 mr-8 border border-gray pb-16">
-						<div class="campaign-tab-nav">
+						<div class="campaign-tab-nav w-full bg-white flex items-center justify-center">
 							<ul class="flex items-center justify-center flex-wrap block py-8 font-bold">
 								<li class="tab-item text-center mr-4 active"><a href="#story" class="inline-block py-4 px-4">스토리</a></li>
 								<li class="tab-item text-center mr-4"><a href="#updates" class="inline-block py-4 px-4">새 소식</a></li>
@@ -98,6 +98,7 @@
 								<li class="tab-item text-center mr-4"><a href="#comments" class="inline-block py-4 px-4">응원하기 <span class="text-brand">70</span></a></li>
 								<li class="tab-item text-center mr-4"><a href="#qna" class="inline-block py-4 px-4">Q&A</a></li>
 							</ul>
+							<a href="#donate" class="sticky-btn-donate inline-block bg-brand hover:bg-brand-dark text-white py-2 px-4 rounded inline-block text-lg text-center ml-4">후원하기</a>
 						</div>
 						<div class="campaign-tab-content px-16"><!--스토리-->
 							<div id="story" class="tab-content-item active">
@@ -568,5 +569,30 @@
 			</form>
 		</div>
 	</div>
+	<script>
+		$(function(){
+			var banner = $(".campaign-tab-nav");
+			var stickyBanner = banner.offset().top;
+			
+			//console.log(stickyBanner);
+			//console.log(sticky);
+			var sticky_banner = function(){
+				//console.log($(this).scrollTop());
+				if($(this).scrollTop() >= stickyBanner){
+					banner.addClass('sticky');
+				}
+				else{
+					banner.removeClass('sticky');
+				}
+			}
+		
+			$(window).on('scroll', sticky_banner);
+
+			window.onresize=function(){
+				$(window).on('scroll', sticky_banner);
+			}
+
+		});
+	</script>
 </body>
 </html>

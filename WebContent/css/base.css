@@ -156,6 +156,26 @@ input[type=submit]{cursor: pointer;}
 	height: 6px;
 }
 
+.campaign-tab-nav .sticky-btn-donate{display: none;}
+.campaign-tab-nav.sticky{
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    border-bottom: 1px solid #c0bebd;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.campaign-tab-nav ul{
+    transition: all .4s;
+}
+
+.campaign-tab-nav.sticky .sticky-btn-donate{display: inline-block;}
+
+.campaign-tab-nav.sticky ul{
+    padding: 0;
+}
+
 .campaign-tab-nav>ul>.tab-item{
     border-bottom-style: solid;
     border-bottom-width: 2px;
