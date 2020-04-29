@@ -6,12 +6,15 @@
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
 	<link href="/project_Ma/lib/css/jquery-ui.theme.min.css" rel="stylesheet"/>
+	<link href="../lib/css/dropzone.css" rel="stylesheet" type="text/css"/>
 	<link href="/project_Ma/lib/css/tailwind.css" rel="stylesheet" type="text/css"/>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="/project_Ma/lib/js/jquery-ui.min.js"></script>
 	<script src="/project_Ma/lib/js/datepicker-ko.js"></script>
 	<script src="/project_Ma/lib/js/jquery.number.min.js"></script>
 	<script src="/project_Ma/lib/ckeditor/ckeditor.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+	<!--<script src="../lib/js/dropzone.js"></script>-->
 	<!---->
 	<!--css-->
 	<link href="/project_Ma/css/base.css" rel="stylesheet" type="text/css"/><!--메인 서브 공통 기본 베이스-->
@@ -62,7 +65,7 @@
 			<div class="w-full max-w-screen-xl my-0 mx-auto py-8">
 				<h1 class="text-2xl text-center my-8">새 캠페인 등록</h1>
 				<div class="w-full max-w-screen-md my-0 mx-auto py-8">
-					<form method="POST" action="">
+					<form id="campaignEditor" method="POST" action="" enctype="multipart/form-data" onsubmit="return editor_validation(this)">
 						<!--캠페인 정보-->
 						<h2 class="mb-4 border-b border-solid border-gray-dark pb-4">캠페인 정보</h2>
 						<div class="mb-8 px-4">
@@ -72,9 +75,11 @@
 							</div>
 							<div class="mb-4">
 								<label for="campaign_img" class="inline-block my-4">이미지</label>
-								<p class="text-sm text-gray-dark mb-2">5MB이하의 이미지(jpeg, gif, png, bmp) 파일만 최대 4장 업로드 가능합니다.</p>
-								<div id="#imgPreview"></div>
-								<input type="file" name="campaign_img" id="campaign_img" accept="image/png, image/jpeg, image/gif, image/bmp" class="appearance-none border border-gray rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline">
+								<p class="text-sm text-gray-dark mb-2">5MB이하의 이미지(jpeg, gif, png, bmp) 파일만 최대 3장 업로드 가능합니다.</p>
+								<div class="bg-gray-lightest rounded pt-4 pl-4">
+									<input type="file" name="campaign_img[]" id="campaign_img" accept="image/png, image/jpeg, image/gif, image/bmp" multiple/>
+									<div id="imgPrevew" class="flex flex-wrap w-full mt-4"></div>
+								</div>
 							</div>
 							<div class="mb-4">
 								<label for="campaign_story" class="inline-block my-4">캠페인 스토리</label>
@@ -153,7 +158,7 @@
 										<div class="w-1/3 flex">
 											<div class="inline-block relative w-1/2 mr-2"><!--select-->
 												<select name="reward[del_year_1]" id="del_year_1" data-name="del_year" class="del_year block appearance-none w-full bg-white border border-gray hover:border-gray-dark px-4 py-2 pr-8 rounded leading-tight focus:outline-none focus:shadow-outline">
-													<option>년</option>
+													<option value="0">년</option>
 												</select>
 												<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2">
 													<i class="xi-angle-down-min"></i>
@@ -161,7 +166,7 @@
 											</div>
 											<div class="inline-block relative w-1/2 mr-2"><!--select-->
 												<select name="reward[del_month_1]" id="del_month_1" data-name="del_month" class="block appearance-none w-full bg-white border border-gray hover:border-gray-dark px-4 py-2 pr-8 rounded leading-tight focus:outline-none focus:shadow-outline">
-													<option>월</option>
+													<option value="0">월</option>
 													<option value="1">1</option>
 													<option value="2">2</option>
 													<option value="3">3</option>
