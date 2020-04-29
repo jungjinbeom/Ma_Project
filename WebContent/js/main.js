@@ -70,8 +70,54 @@ $(function(){
 		}else{
 			$("#re_0" + i).text((result) + "일 남음"); 
 		}
-	}  
-});
+	}   
+	
+	$(window).scroll(function(){
+		//스크롤 위치 가져오기 
+		var scrollPos = $(window).scrollTop();
+		  
+			console.log(scrollPos);
+			if(scrollPos > 1200){  
+				$(".youtube_ment_01").stop().animate({
+					'opacity':'1', 
+					'margin-left':'122px'     
+				}, 2000);  
+				   
+				$("#player").stop().animate({
+					'opacity':'1'
+				}, 3000);
+			}
+			if(scrollPos < 1150){  
+				$(".youtube_ment_01").stop().animate({
+					'opacity':'0', 
+					'margin-left':'-604px' 
+				}, 1000);    
+				$("#player").stop().animate({ 
+					'opacity':'0' 
+				}, 1000);
+			} 
+			
+			if(scrollPos>660 &&
+			   scrollPos<1190){
+				$(".page_up_div").css({
+					'display':'none'
+				});
+			}else{
+				$(".page_up_div").css({
+					'display':"block"
+				});
+			}
+			
+			 
+			
+		});  
+	
+	
+	
+	
+	
+});	
+
  
 function dateDiff(_date_01, _date_02){ 
 	//instanceif= 특정 객체가 맞냐 아니냐. 
@@ -89,6 +135,3 @@ function dateDiff(_date_01, _date_02){
 	
 }
  
-
-
-
