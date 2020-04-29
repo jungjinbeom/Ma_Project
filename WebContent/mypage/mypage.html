@@ -2,6 +2,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
+
+<title>Insert title here</title>
+</head>
 	<title>ChariTree 마이페이지</title>
 	<!--공통 라이브러리-->
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
@@ -17,11 +20,11 @@
 	<script src="/project_Ma/js/common.js" type="text/javascript"></script><!--공통/필수-->
 	<!--<script src="/project_Ma/js/main.js" type="text/javascript"></script>
 	<script src="/project_Ma/js/sub.js" type="text/javascript"></script>-->
-	<link rel="stylesheet" href="/project_Ma/mypage/myPage.css" type="text/css"/><!-- myPage.css -->
+	<link rel="stylesheet" href="/project_Ma/css/myPage.css" type="text/css"/><!-- myPage.css -->
 	<script src="/project_Ma/js/joinMembership.js" type="text/javascript"></script>
 
-</head>
-<body >
+
+<body>
 	<div class="page">
 		<!--헤더(메뉴)-->
 		<header id="site-header" class="border-b border-solid border-gray flex items-center relative">
@@ -48,7 +51,7 @@
 					</ul>
 					<ul class="login-menu flex items-center justify-between flex-wrap block text-gray-darker">
 						<li class="menu-item text-center mr-4"><a href="/project_Ma/login/login.html" class="inline-block">로그인</a></li>
-						<li class="menu-item text-center"><a href="/project_Ma/register/register.html" class="inline-block">회원가입</a></li>
+						<li class="menu-item text-center"><a href="/project_Ma/joinMembership/joinMemberShipSelect.html" class="inline-block">회원가입</a></li>
 						<li class="menu-item text-center mr-4 hidden"><a href="#" class="inline-block">로그아웃</a></li>
 						<li class="menu-item text-center hidden"><a href="/project_Ma/mypage/mypage.html" class="inline-block">마이페이지</a></li>
 					</ul>
@@ -76,8 +79,9 @@
 		
 		 <div id="myInformation" ><!-- 내정보 탭-->
 		 	 
+		
 		 <h1 class="text-3xl">내 정보</h1>
-	 		<div id="hr"></div>
+	 			<div id="hr"></div>
 	 		
 		 <!-- 이름 -->
 		  	<div class="md:flex md:items-center mb-6 ">
@@ -87,7 +91,7 @@
 			    </div>
 			    <!-- username textbox -->
 			    <div class="md:w-1.5/4">
-			     	<input class="bg-gray-200 appearance-none border-2 border-info rounded  py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-info-dark" id="inline-full-name" type="text" >
+			     	<input class="bg-gray-200 appearance-none border-2 border-info rounded  py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-info-dark" id="nameText" type="text" >
 			    </div>
 			   
 			    
@@ -117,7 +121,7 @@
 		    </div>
 		    <!-- PW textbox -->
 			    <div class="md:w-1/4">
-			      <input class="bg-gray-200 appearance-none border-2 border-info rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-info-dark" id="myPw" type="password" placeholder="********" >
+			      <input class="bg-gray-200 appearance-none border-2 border-info rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-info-dark" id="myPw" type="password">
 			    </div>
 		    <!-- button -->
 			    <div id="usernameButton">
@@ -137,7 +141,7 @@
 			    </div>
 		    <!-- email textbox -->
 			    <div class="md:w-1/4">
-			      <input class="bg-gray-200 appearance-none border-2 border-info rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-danger-dark " id="inline-full-name" type="text" >
+			      <input class="bg-gray-200 appearance-none border-2 border-info rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-info-dark " id="EmailText" type="text" >
 			    </div>
 			  
 			    
@@ -150,7 +154,7 @@
 			    </div>
 			    <!-- CellPhone textbox -->
 			    <div class="md:w-1/4">
-			      <input class="bg-gray-200 appearance-none border-2 border-info rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-info-dark" id="inline-full-name" type="text">
+			      <input id="phoneNumberText" class="bg-gray-200 appearance-none border-2 border-info rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-info-dark" maxlength="11" type="text">
 			    </div>
 		  </div>
 		  
@@ -178,7 +182,7 @@
 		 </div> 
 		 
 		 <div id="updateButton">
-		 	  <button class="bg-danger hover:bg-dnager-dark text-white font-bold py-2 px-4 rounded m">
+		 	  <button id="updateBtn"class="bg-danger hover:bg-dnager-dark text-white font-bold py-2 px-4 rounded m">
 				수정하기
 			 </button>
 			 <button class="bg-danger hover:bg-danger-dark text-white font-bold py-2 px-4 rounded m">
@@ -223,7 +227,7 @@
 			<form method="GET" id="searchForm" class="w-full max-w-sm">
 				<div class="flex items-center border-b border-b-2 border-white py-2">
 					<input class="appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" name="search_text" placeholder="검색" aria-label="Full name">
-					<button class="flex-shrink-0 text-white py-1 px-2" id="searchSubmit"><i class="xi-search"></i></button>
+					<button class="sflex-shrink-0 text-white py-1 px-2" id="searchSubmit"><i class="xi-search"></i></button>
 				</div>
 			</form>
 		</div>
@@ -232,25 +236,24 @@
 	
 	<!-- 비밀번호 변경창  -->
 	<div id="passwordUpdate" class="modal w-full h-screen bg-black opacity-100 fixed top-0 hidden m-0 m-auto">
-			<div class="bg-white h-auto mt-32 w-3/12 m-0 m-auto">
+			<form  class="bg-white h-auto mt-32 w-3/12 m-0 m-auto">
 			<div class="close text-black inline-block text-xl top-0 left-0 p-4 cursor-pointer"><i class="xi-close"></i></div><br/>			
 			<label class="text-3xl font-bold ml-12 mt-8">비밀번호 변경</label>
 				<div class="md:w-3/4  mt-4 m-0 m-auto">
 			      <input class="bg-gray-200 appearance-none border-2 border-info rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-info-dark" id="modalPw" type="password" placeholder="현재비밀번호" ><br/>
-			      <label id="subText" class="text-gray text-xs">영문, 숫자, 특수문자 (!@#$%^&*+=-)를 조합한 8자 이상</label><br/>
+			      <label id="subText" class="text-gray text-xs">영문, 숫자, 특수문자를 조합한 8자 이상</label><br/>
 			    </div>
 			    <div class="md:w-3/4  mt-4 m-0 m-auto">
 			      <input class="bg-gray-200 appearance-none border-2 border-info rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-info-dark" id="modalPwChk" type="password" placeholder="변경비밀번호" >
 			    </div>
 			    <div class="md:w-3/4  mt-4 m-0 m-auto">
 			      <input class="bg-gray-200 appearance-none border-2 border-info rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-info-dark" id="modalPwChk2" type="password" placeholder="변경비밀번호 확인" >
-			      <div id="pw-success"class="text-success">비밀번호가 일치합니다</div>
-			      <div id="pw-danger"class="text-danger">비밀번호가 일치하지 않습니다</div>
+			      <div id="modal-pw-success"class="text-success">비밀번호가 일치합니다</div>
+			      <div id="modal-pw-danger"class="text-danger">비밀번호가 일치하지 않습니다. 양식에 맞추어 입력해주세요</div>
 			    </div>
-			    <button class="bg-danger hover:bg-danger-dark  ml-12 w-3/4 text-white font-bold py-2 px-4 rounded mb-8 mt-8">
-			  		  확인
-			    </button>
-			</div>
+			    <input type="submit" value="변경"id="mcBtn"class="bg-danger hover:bg-danger-dark  ml-12 w-3/4 text-white font-bold py-2 px-4 rounded mb-8 mt-8">
+			</form>
 		</div>
 </body>
 </html>
+
