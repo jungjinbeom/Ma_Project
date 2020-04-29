@@ -1,13 +1,7 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-input[type=submit]{cursor: pointer;}
->>>>>>> 31f03afeaac7276b42c0a030c37a732289c38f33
-=======
 input[type=submit]{cursor: pointer;}
 
 =======
->>>>>>> project_J
 >>>>>>> project_J
 #site-navigation>.nav-menu>.menu-item{
     border-bottom-style: solid;
@@ -34,10 +28,6 @@ input[type=submit]{cursor: pointer;}
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> project_J
 }
 
 /*jquery datepicker*/
@@ -167,51 +157,10 @@ input[type=submit]{cursor: pointer;}
 }
 
 /*캠페인 상세*/
-<<<<<<< HEAD
-.campaign-slider,
-.campaign-slider .slide img{height: 400px;}
-=======
->>>>>>> project_J
 .progress{
 	height: 6px;
 }
 
-<<<<<<< HEAD
-.campaign-slider-arrow{
-    top: 175px;
-    font-size: 36px;
-    opacity: 0.9;
-}
-.campaign-slider-nav .slider-nav-item{
-    transition: all .3s;
-    opacity: 0.5;
-}
-.campaign-slider-nav .slider-nav-item.active{
-    opacity: 1;
-}
-
-.campaign-tab-nav .sticky-btn-donate{display: none;}
-.campaign-tab-nav.sticky{
-    position:fixed;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    border-bottom: 1px solid #c0bebd;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-}
-
-.campaign-tab-nav ul{
-    transition: all .4s;
-}
-
-.campaign-tab-nav.sticky .sticky-btn-donate{display: inline-block;}
-
-.campaign-tab-nav.sticky ul{
-    padding: 0;
-}
-
-=======
->>>>>>> project_J
 .campaign-tab-nav>ul>.tab-item{
     border-bottom-style: solid;
     border-bottom-width: 2px;
@@ -273,19 +222,6 @@ input[type=submit]{cursor: pointer;}
 .rewards .reward-item .overlay:hover{
     opacity: 0.9;
 }
-<<<<<<< HEAD
-
-.add-wishlist .wishlist-ico::after{
-    font-family: xeicon;
-    content: "\ea11";
-}
-.add-wishlist.added-this .wishlist-ico::after{
-    color: #cb0802;
-    content: "\ea10";
->>>>>>> 31f03afeaac7276b42c0a030c37a732289c38f33
-}
-=======
 =======
 }
->>>>>>> project_J
 >>>>>>> project_J
