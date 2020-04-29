@@ -152,8 +152,23 @@ input[type=submit]{cursor: pointer;}
 }
 
 /*캠페인 상세*/
+.campaign-slider,
+.campaign-slider .slide img{height: 400px;}
 .progress{
 	height: 6px;
+}
+
+.campaign-slider-arrow{
+    top: 175px;
+    font-size: 36px;
+    opacity: 0.9;
+}
+.campaign-slider-nav .slider-nav-item{
+    transition: all .3s;
+    opacity: 0.5;
+}
+.campaign-slider-nav .slider-nav-item.active{
+    opacity: 1;
 }
 
 .campaign-tab-nav .sticky-btn-donate{display: none;}
