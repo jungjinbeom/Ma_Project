@@ -193,6 +193,7 @@ $(function(){
 		}
 	});
 	
+
 	
 	for(i=1;i<=4;i++){
 		var day = $("#expected"+i).text();  
@@ -209,7 +210,8 @@ $(function(){
 	var reg3= /^[a-zA-Z]{2,10}[.]{1}[a-zA-Z]{2,3}$/;
 	var reg4= /^[0-9]{1}[0-9]{1}[0-9]{1}[0-9]{1}[0-9]{1}$/;
 	var reg5= /^[a-zA-Z]{1}\w{7,11}$/; 
-	
+	var reg6= /^[0-9]{1}[0-9]{1}[0-9]{1}[0-9]{1}[0-9]{1}[0-9]{1}[0-9]{1}[0-9]{1}[0-9]{1}[0-9]{1}$/;
+
 	$("#pay").click(function(){
 		if($("#fund").val()==""){
 			$('#pay').attr("href", "#a");
@@ -338,15 +340,42 @@ $(function(){
 	});
 	
 	$("#sendId").click(function(){
-		if(!reg.test($("#rename").val())){
-			$("#reTxt").css({
-				"display":"block"	 
+		if($("input[id='pMember']").prop("checked")==true){
+			$("#reNum").css({
+				"display":"none"	 
 			});
-		}else if(!reg2.test($("#reEmail").val()) || !reg3.test($("#domain").val())){
+			if(!reg.test($("#rename").val())){
+				$("#reTxt").css({
+					"display":"block"	 
+				});
+			}else{
+				$("#reTxt").css({
+					"display":"none"	 
+				});
+			}
+		}
+		if($("input[id='bMember']").prop("checked")==true){
+			$("#reTxt").css({
+				"display":"none"	 
+			});
+			if(!reg6.test($("#reBNum").val())){
+				$("#reNum").css({
+					"display":"block"	 
+				});
+			}else{
+				$("#reNum").css({
+					"display":"none"	 
+				});
+			}
+		}
+		if(!reg2.test($("#reEmail").val()) || !reg3.test($("#domain").val())){
 			$("#reTxt2").css({
 				"display":"block"	 
 			});
 		}else{
+			$("#reTxt2").css({
+				"display":"none"	 
+			});
 			$("#emailMsg").css({
 				"display":"block"	 
 			});
@@ -357,14 +386,49 @@ $(function(){
 			$("#reTxt3").css({
 				"display":"block"
 			});
-		}else if(!reg2.test($("#reEmail2").val()) || !reg3.test($("#domain2").val())){
+		}else{
+			$("#reTxt3").css({
+				"display":"none"
+			});
+		}
+		if(!reg2.test($("#reEmail2").val()) || !reg3.test($("#domain2").val())){
 			$("#reTxt4").css({
 				"display":"block"	 
 			});
 		}else{
-		$("#emailMsg2").css({
-			"display":"block"	 
+			$("#reTxt4").css({
+				"display":"none"	 
+			});
+			$("#emailMsg2").css({
+				"display":"block"	 
 		});
+		}
+	});
+	
+	$("#bMember").click(function(){
+		$("#reTxt").css({
+			"display":"none"	 
+		});
+		if($("input[id='bMember']").prop("checked")==true){
+			$("#bmInfo").css({
+				"display":"block"
+			});
+			$("#pmInfo").css({
+				"display":"none"
+			});
+		}
+	});
+	$("#pMember").click(function(){
+		$("#reNum").css({
+			"display":"none"	 
+		});
+		if($("input[id='pMember']").prop("checked")==true){
+			$("#bmInfo").css({
+				"display":"none"
+			});
+			$("#pmInfo").css({
+				"display":"block"
+			});
 		}
 	});
 	
@@ -426,6 +490,8 @@ function slideShow(){
 	x[index-1].style.display="block";
 	setTimeout(slideShow,5000);
 }
+
+
 
 
 
