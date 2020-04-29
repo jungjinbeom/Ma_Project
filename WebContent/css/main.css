@@ -1,1 +1,348 @@
-@charset "EUC-KR";
+@charset "UTF-8";
+#mainImgDiv{
+	height:450px;
+} 
+ 
+#otherCampaign{
+	height:500px;
+} 
+#preCamDiv, #deadlineDiv{
+	height:500px;
+}  
+#siteReisterBanner{
+	height:350px; 
+	background-image:url("img/img_main/main_heart_01.png"); 
+}    
+/* 
+==================================
+	slick~main image                                                                                  부분
+*/
+.slider{
+	width:100%; 
+	height:500px;  
+	position:relative;
+	margin:0px auto; 
+}
+.slider img{
+	margin:0px auto;
+	margin-top:3%;   
+	width:50%;     
+	height:400px;     
+}
+.slick-slide{
+  width:1280px;
+  height:400px;   	
+}
+#mainImgDiv div>.slider{
+	height:450px; 
+}
+#mainImgDiv div>.slider>ul{
+	position:absolute; 
+	top:90%;
+}
+.slick-dots li{
+	top:10%;
+}
+.slick-dots li button:before{
+	font-size:40px;
+	margin:0px auto;  
+} 
+.slick-dots li.slick-active button:before{
+	color:red;
+	font-size:40px;  
+}
+    
+#mainImgDiv div>.slider>.slick-prev_01 {
+    position: absolute;
+    line-height:10px;
+    z-index: 10;
+    width: 100px; 
+    height: 51px;
+    top: 50%;
+    left: 1%;
+    padding: 10px;
+    font-size:2em;
+    background: #e6e4e4;  
+    color: #f52c38;  
+}     
+.xi-angle-left-min,
+.xi-angle-right-min{
+	margin-top: -5px;
+    margin-left: -4px;
+}  
+#mainImgDiv div>.slider>.slick-next_01{ 
+	position: absolute;
+    z-index: 10;
+    top: 50%;
+    width: 100px; 
+    height: 51px; 
+    right: 1%; 
+    line-height:10px; 
+    padding: 10px;
+    background: #e6e4e4;   
+    font-size:2em;
+    color: #f52c38;  
+} 
+/* 
+==================================
+*/
+.percentage{
+	border-bottom:1px solid red;
+	font-weight:bold;
+}
+#mid_cam_01, #mid_cam_02, #mid_cam_03{
+	height:420px;
+}  
+.mid_cam_img{
+	width:95%;
+	height:270px;
+}
+.mid_cam_name,.pre_date{
+	width:95%;
+	height:50px;
+}
+#mainMoreDiv_01{ 
+	color: gray; 
+    right:9%; 
+    margin-top: -2px;
+    border-bottom: 1px solid black;	 
+}
+#pre_open_div{
+	color:rgb(29,33,41);
+	position:relative;
+	line-height:137px;
+	font-size: 35px;
+    width: 428px; 
+    height: 100px; 
+    left: 8%;   
+    font-weight:bold;
+}
+.mid_title{
+	font-size: 35px;
+    width: 330px;
+    height: 100px;
+    line-height: 136px;
+    margin-left: 17px;
+    font-weight:bold; 
+}   
+/*==============
+	slick 오픈예정부분
+=======*/
+
+.carousel_Div{
+	width:200px;
+	height:350px; 
+}
+.carou_cam_img{
+	width:80%;
+	height:180px;
+}
+.carou_cam_name{
+	font-size:1.6em; 
+	width:100%; 
+	height:72px;
+	text-align:center; 
+}  
+.carou_cam_date{
+	width:100%; 
+	height:30px;
+	text-align:center;
+	margin-top:3px; 
+} 
+#carousel_Slick > .slick-list>.slick-track>.slick-slide>div>.carousel_Div{
+	padding:30px;
+	width:90%;
+	margin-top:50px;  	  
+}
+#carousel_Slick>.slick-next_02{
+     position: relative;
+     z-index: 100;
+     top: -400px;
+     left: 735px; 
+     width:50px; 
+     background:white; 
+     color:#f52c38; 
+     box-shadow: 0 0 10px rgb(255,255,255,0.8);
+     height: 40px;
+}
+#carousel_Slick>.slick-prev_02{
+	 position: relative;
+	 z-index:100; 
+	 top: 40px;
+     left: 685px;    
+     width:50px;
+     background:white;
+     color:#f52c38;  
+     box-shadow: 0 0 10px rgb(255,255,255,0.8);
+     height: 40px;
+}
+  /*=====================
+  	마감임박, 오픈예정~이미지 등
+  */
+#dead_Line_Div{ 
+	margin-bottom: 60px;
+	width:200px;
+	font-weight:bold;	
+}  
+.d_box , .d_Img{
+	height:100px;
+	margin-right:5px; 
+}  
+  
+.d_Img{
+	margin-top:10px;
+} 
+.d_Img > a >img{  
+	width:100%;
+	height:100px; 
+}
+#dead_scroll_Div{
+	height: 380px;    
+}
+.mid_cam_img > img{
+	height:262px;  
+}
+.carou_cam_img > img{
+	width:100%; 
+	height:176px; 	    
+} 
+
+.mid-genre{
+	width:130px;
+	text-align:center;
+	color:gray;
+	line-height:36px; 
+	font-size:0.8em;	
+} 
+.mid_D_day{
+	text-align:center;
+	line-height:22px;
+	font-size:0.8em; 
+}
+.mid_cam_name{
+	font-size:1.4em; 
+	margin:0px auto;
+	text-align:center;
+}
+/*
+
+달성도 bar
+	mid부분(main 부분)
+*/
+
+.mid_bar_div{
+	width:202px;     
+}
+#mid_emptyBar_01,
+#mid_emptyBar_02,
+#mid_emptyBar_03{
+	margin-top:15px; 
+	width:200px;  
+	background-color:#e4eef2;
+}
+#mid_colorBar_01{
+	margin-top:-1px;
+	margin-left:-1px;
+	width:50%;  
+}
+
+#mid_colorBar_02{
+	margin-top:-1px;
+	margin-left:-1px;
+	width:85%;   
+} 
+#mid_colorBar_03{
+	margin-top:-1px;
+	margin-left:-1px;
+	width:75%;   
+}  
+/*d-color*/
+.d_box{  
+	margin-top: 5px; 
+}
+#d_colorBar_01{
+ 	margin-top:-1px;
+ 	width:75%;  
+ 	margin-left:-1px;
+ 	text-align: center;
+ } 
+ .d_camName {
+ 	text-align: right;
+    margin-left: -20px;
+    height: 25px; 
+ }   
+ .d_camName > span{
+ 	font-weight:bold;
+ 	font-size:14px; 
+ 	color: #f52c38;
+ 	border-bottom:#f52c38;  
+ } 
+ .d_camTitle{ 
+ 	font-size:1.7em;  
+ 	text-align:center;
+ }
+  #d_colorBar_02{
+  	margin-top:-1px;
+  	width:50%;   
+  	margin-left:-1px;
+ }
+  #d_colorBar_03{
+  	margin-top:-1px;
+  	width:85%;  
+  	margin-left:-1px;
+ }
+  #d_colorBar_04{
+  	margin-top:-1px;
+  	width:15%; 
+  	margin-left:-1px;
+ }
+  #d_colorBar_05{
+  	margin-top:-1px;
+  	width:45%; 
+  	margin-left:-1px;
+ }
+ .d_camBar{  
+ 	margin-top:8px;
+ 	height: 1px; 
+ }
+  
+#d_emptyBar_01,
+#d_emptyBar_02,
+#d_emptyBar_03,
+#d_emptyBar_04,
+#d_emptyBar_05{
+	margin-top:10px; 
+	background-color:#e4eef2;
+}
+
+.remainDay{
+	margin-left:140px;
+	font-weight:bold;
+	font-size:0.8em; 
+} 
+   
+#resisterInput{    
+	margin-left: 530px;
+    margin-top: 30px;
+    width: 200px;
+    font-size: 1.6em;
+} 
+#mid_title_word{
+	margin-left:21px; 
+}
+#banner_ment_01{
+	font-size:2em;
+	text-align:center;
+	margin-top:100px;
+	
+} 
+#banner_ment_01 > span{
+	color:#f52c38; 
+}
+#banner_ment_02{
+	font-size:1.4em;
+	margin-top:10px;
+	text-align:center; 
+	font-weight:bold;
+	
+}
