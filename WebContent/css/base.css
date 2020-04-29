@@ -1,7 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 input[type=submit]{cursor: pointer;}
 >>>>>>> 31f03afeaac7276b42c0a030c37a732289c38f33
+=======
+input[type=submit]{cursor: pointer;}
+
+=======
+>>>>>>> project_J
+>>>>>>> project_J
 #site-navigation>.nav-menu>.menu-item{
     border-bottom-style: solid;
     border-bottom-width: 2px;
@@ -27,7 +34,10 @@ input[type=submit]{cursor: pointer;}
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> project_J
 }
 
 /*jquery datepicker*/
@@ -157,12 +167,16 @@ input[type=submit]{cursor: pointer;}
 }
 
 /*캠페인 상세*/
+<<<<<<< HEAD
 .campaign-slider,
 .campaign-slider .slide img{height: 400px;}
+=======
+>>>>>>> project_J
 .progress{
 	height: 6px;
 }
 
+<<<<<<< HEAD
 .campaign-slider-arrow{
     top: 175px;
     font-size: 36px;
@@ -196,6 +210,8 @@ input[type=submit]{cursor: pointer;}
     padding: 0;
 }
 
+=======
+>>>>>>> project_J
 .campaign-tab-nav>ul>.tab-item{
     border-bottom-style: solid;
     border-bottom-width: 2px;
@@ -257,6 +273,7 @@ input[type=submit]{cursor: pointer;}
 .rewards .reward-item .overlay:hover{
     opacity: 0.9;
 }
+<<<<<<< HEAD
 
 .add-wishlist .wishlist-ico::after{
     font-family: xeicon;
@@ -267,3 +284,8 @@ input[type=submit]{cursor: pointer;}
     content: "\ea10";
 >>>>>>> 31f03afeaac7276b42c0a030c37a732289c38f33
 }
+=======
+=======
+}
+>>>>>>> project_J
+>>>>>>> project_J

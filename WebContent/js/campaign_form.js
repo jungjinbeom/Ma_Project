@@ -18,10 +18,17 @@ $(function(){
 		$('.del_year').append('<option>'+ nowYear++ +'</option>');
 	}
 
+<<<<<<< HEAD
+=======
+	$('.reward-fieldset').each(function(){
+		console.log($(this).index());
+	});
+>>>>>>> project_J
 
 	//숫자포맷 세팅
 	$('.min_money, .max_money, .goal').number(true, 0);
 
+<<<<<<< HEAD
 
 	$(document).on('click', '.add-reward-row', function(e){
 		e.preventDefault();
@@ -29,14 +36,29 @@ $(function(){
 
 		var num = $(this).data('number');
 		$('#reward-fieldset-'+num).after(fieldset);
+=======
+	$('.add-reward-row').on('click', function(e){
+		e.preventDefault();
+
+		var num = $(this).data('number');
+		var fieldset = $('#reward-fieldset-'+num).clone(true);
+		fieldset.find('input, select, textarea').val('');
+		$('#reward-fieldset-'+ num).after(fieldset);
+
+>>>>>>> project_J
 		setFieldsetNumber();
 	});
 
 	$(document).on('click', '.remove-reward-row', function(e){
+<<<<<<< HEAD
+=======
+
+>>>>>>> project_J
 		e.preventDefault();
 
 		var num = $(this).data('number');
 		$('#reward-fieldset-'+num).remove();
+<<<<<<< HEAD
 
 		setFieldsetNumber();
 	});
@@ -55,6 +77,20 @@ $(function(){
 
 	function setFieldsetNumber(){
 		var idx = 1;
+=======
+		setFieldsetNumber();
+		
+	});
+
+	function setFieldsetNumber(){
+		var idx = 1;
+		var fieldsetLength = $('.reward-fieldset').length;
+		console.log(fieldsetLength);
+		if(fieldsetLength == 1){
+			console.log($('.remove-reward-row'));
+			$('.remove-reward-row').remove();
+		}
+>>>>>>> project_J
 
 		$('.reward-fieldset').each(function(){
 			var fieldset = $(this);

@@ -33,14 +33,19 @@ $(function(){
         });
     });
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
 =======
+=======
+
+>>>>>>> project_J
 
     $('input.number-only').on('keyup', function(){
         $(this).val($(this).val().replace(/[^0-9]/g,""));
     });
 
     /* 후원 상세페이지 */
+<<<<<<< HEAD
     $('a.btn-donate').on('click', function(e){
         e.preventDefault();
         $('html,body').animate({
@@ -60,6 +65,10 @@ $(function(){
             scrollTop: $("#donate").offset().top
         });
 
+=======
+    $('.campaign-tab-nav .tab-item a').on('click', function(e){
+        e.preventDefault();
+>>>>>>> project_J
         $('.campaign-tab-nav .tab-item').removeClass('active');
         $('.campaign-tab-content .tab-content-item').removeClass('active');
 
@@ -72,6 +81,7 @@ $(function(){
         $($(this).attr('href')).toggleClass('hidden');
     });
 
+<<<<<<< HEAD
     //소셜공유
     var clipboard = new ClipboardJS('.copy_url');
 	clipboard.on('success', function(e) {
@@ -141,3 +151,6 @@ function campaign_qna_validation(){
     }
 }
 >>>>>>> 31f03afeaac7276b42c0a030c37a732289c38f33
+=======
+});
+>>>>>>> project_J
