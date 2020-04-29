@@ -1,414 +1,511 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">       
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8">
-	<title>ChariTree</title>
-	
-	<!-- ---------------------------------------------------------------------- -->
-	<!-- ---------------------------------------------------------------------- -->
-	<!-- lib --> 
-		<!-- font link -->
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-		<!-- xeicon link -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
-		<!-- tailwind cdn -->
-	<link href="/project_Ma/lib/css/tailwind.css" rel="stylesheet" type="text/css"/>
-		<!-- slikslide CSS --> 
-		<link rel="stylesheet" type="text/css" href="css/slick.css"/>
-		<link rel="stylesheet" type="text/css" href="css/slick-theme.css"/> 
-	 
-	<!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
-		<!-- jquery --> 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<!-- slik slide js -->
-	<script src="js/slick.js"></script> 
-	<!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
-	<!-- ---------------------------------------------------------------------- -->
-	<!-- ---------------------------------------------------------------------- -->
-	<!-- css -->   
-		<!-- main & sub CSS-->
-	<link href="/project_Ma/css/base.css" rel="stylesheet" type="text/css"/>
-		<!-- main CSS -->
-	<link href="/project_Ma/css/main.css" rel="stylesheet" type="text/css"/>
-	<!-- ---------------------------------------------------------------------- -->
-	<!-- ---------------------------------------------------------------------- -->
-	<!-- js --> 
-		<!-- main & sub js : 매우 중요 -->
-	<script src="/project_Ma/js/common.js" type="text/javascript"></script>
-			
-	<!--  
+<title>ChariTree</title>
+ 
+<!-- ---------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------- -->
+<!-- lib -->
+<!-- font link --> 
+<link
+	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&amp;display=swap"
+	rel="stylesheet">
+<!-- xeicon link -->
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+<!-- tailwind cdn -->
+<link href="/project_Ma/lib/css/tailwind.css" rel="stylesheet"
+	type="text/css" />
+<!-- slikslide CSS --> 
+<link rel="stylesheet" type="text/css" href="css/slick.css" />
+<link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+
+<!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
+<!-- jquery -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+	type="text/javascript"></script>
+<!-- slik slide js -->
+<script src="js/slick.js" type="text/javascript"></script>
+<!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+<!-- ---------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------- -->
+<!-- css -->
+<!-- main & sub CSS-->
+<link href="/project_Ma/css/base.css" rel="stylesheet" type="text/css" />
+<!-- main CSS -->
+<link href="/project_Ma/css/main.css" rel="stylesheet" type="text/css" />
+<!-- ---------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------- -->
+<!-- js -->
+<!-- main & sub js : 매우 중요 -->
+<script src="/project_Ma/js/common.js" type="text/javascript"></script>
+
+<!--  
 	<script src="/project_Ma/js/sub.js" type="text/javascript"></script>-->
 </head>
 <body>
-		<div class="page">
-		<!--헤더(메뉴)--> 
-		<header id="site-header" class="border-b border-solid border-gray flex items-center relative">
-			<div class="w-full max-w-screen-xl my-0 mx-auto flex items-center justify-between flex-wrap px-8 xl:px-0">
+	<div class="page">
+		<!--헤더(메뉴)-->
+		<header id="site-header"
+			class="border-b border-solid border-gray flex items-center relative">
+			<div
+				class="w-full max-w-screen-xl my-0 mx-auto flex items-center justify-between flex-wrap px-8 xl:px-0">
 				<div id="siteLogo" class="flex-shrink-0 w-1/4">
-					<a href="/project_Ma/index.html"><img class="w-64" src="img/chariTree_logo.png"></a>
+					<a href="/project_Ma/index.html"><img class="w-64"
+						src="img/chariTree_logo.png" alt=""></a>
 				</div>
-				<nav id="site-navigation" class="flex items-center justify-between flex-wrap flex-grow w-3/4">
-					<ul class="nav-menu z-50 flex items-center flex-wrap flex-grow block text-lg">
+				<nav id="site-navigation"
+					class="flex items-center justify-between flex-wrap flex-grow w-3/4">
+					<ul
+						class="nav-menu z-50 flex items-center flex-wrap flex-grow block text-lg">
 						<li class="menu-item text-center has-child flex items-center mr-2">
-							<a href="/project_Ma/campaign/all_campaign.html" class="inline-block py-8 px-4">캠페인</a>
-							<div class="sub-menu absolute border-b border-solid border-gray bg-white w-full left-0 hidden">
-								<ul class="w-full max-w-screen-xl my-0 mx-auto flex items-center h-20 text-white">
-									<li class="menu-item mr-8 w-1/6"><a href="/project_Ma/campaign/all_campaign.html" class="block bg-brand hover:bg-brand-dark px-4 py-2">모든 캠페인</a></li>
-									<li class="menu-item mr-8 w-1/6"><a href="/project_Ma/campaign/pre_campaign.html" class="block bg-brand hover:bg-brand-dark px-4 py-2">오픈 예정 캠페인</a></li>
-									<li class="menu-item mr-8 w-1/6"><a href="/project_Ma/campaign/ex_campaign.html" class="block bg-brand hover:bg-brand-dark px-4 py-2">지난 캠페인</a></li>
+							<a href="/project_Ma/campaign/all_campaign.html"
+							class="inline-block py-8 px-4">캠페인</a>
+							<div
+								class="sub-menu absolute border-b border-solid border-gray bg-white w-full left-0 hidden">
+								<ul
+									class="w-full max-w-screen-xl my-0 mx-auto flex items-center h-20 text-white">
+									<li class="menu-item mr-8 w-1/6"><a
+										href="/project_Ma/campaign/all_campaign.html"
+										class="block bg-brand hover:bg-brand-dark px-4 py-2">모든
+											캠페인</a></li>
+									<li class="menu-item mr-8 w-1/6"><a
+										href="/project_Ma/campaign/pre_campaign.html"
+										class="block bg-brand hover:bg-brand-dark px-4 py-2">오픈 예정
+											캠페인</a></li>
+									<li class="menu-item mr-8 w-1/6"><a
+										href="/project_Ma/campaign/ex_campaign.html"
+										class="block bg-brand hover:bg-brand-dark px-4 py-2">지난
+											캠페인</a></li>
 								</ul>
 							</div>
 						</li>
-						<li class="menu-item text-center flex items-center mr-2"><a href="/project_Ma/about_us/about_us.html" class="inline-block py-8 px-4">회사 소개</a></li>
-						<li class="menu-item text-center flex items-center mr-2"><a href="/project_Ma/news/notice.html" class="inline-block py-8 px-4">새 소식</a></li>
-						<li class="menu-item text-center flex items-center mr-2"><a href="about_us/serviceCenter.html" class="inline-block py-8 px-4">고객센터</a></li>
-						<li class="menu-item text-center flex items-center"><a href="#" data-target="#searchModal" id="search-ico" class="inline-block py-8 px-4"><i class="xi-search"></i></a></li>
+						<li class="menu-item text-center flex items-center mr-2"><a
+							href="/project_Ma/about_us/about_us.html"
+							class="inline-block py-8 px-4">회사 소개</a></li>
+						<li class="menu-item text-center flex items-center mr-2"><a
+							href="/project_Ma/news/notice.html"
+							class="inline-block py-8 px-4">새 소식</a></li>
+						<li class="menu-item text-center flex items-center mr-2"><a
+							href="about_us/serviceCenter.html" class="inline-block py-8 px-4">고객센터</a></li>
+						<li class="menu-item text-center flex items-center"><a
+							href="#" data-target="#searchModal" id="search-ico"
+							class="inline-block py-8 px-4"><i class="xi-search"></i></a></li>
 					</ul>
-					<ul class="login-menu flex items-center justify-between flex-wrap block text-gray-darker"> 
-						<li class="menu-item text-center mr-4"><a href="/project_Ma/login/login.html" class="inline-block">로그인</a></li>
-						<li class="menu-item text-center"><a href="/project_Ma/register/register.html" class="inline-block">회원가입</a></li>
-						<li class="menu-item text-center mr-4 hidden"><a href="#" class="inline-block">로그아웃</a></li>
-						<li class="menu-item text-center hidden"><a href="/project_Ma/mypage/mypage.html" class="inline-block">마이페이지</a></li>
+					<ul
+						class="login-menu flex items-center justify-between flex-wrap block text-gray-darker">
+						<li class="menu-item text-center mr-4"><a
+							href="/project_Ma/login/login.html" class="inline-block">로그인</a></li>
+						<li class="menu-item text-center"><a
+							href="/project_Ma/register/register.html" class="inline-block">회원가입</a></li>
+						<li class="menu-item text-center mr-4 hidden"><a href="#"
+							class="inline-block">로그아웃</a></li>
+						<li class="menu-item text-center hidden"><a
+							href="/project_Ma/mypage/mypage.html" class="inline-block">마이페이지</a></li>
 					</ul>
 				</nav>
 			</div>
-		</header>  
+		</header>
 		<!---------------------------------------------->
 		<!---------------------------------------------->
-			<!-- 메인 몸통 -->  
-		<div id="content" class="w-full my-0 mx-auto">  
-			<!-- img slide -->      
+		<!-- 메인 몸통 -->
+		<div id="content" class="w-full my-0 mx-auto">
+			<!-- img slide -->
 			<div id="mainImgDiv" class="w-full my-0 mx-auto">
-		 		<div  class="w-full my-0 mx-auto bg-gray-lighter">    	
-					<div class="slider single-item">      
-					 	<div><img src="img/img_main/main_tree_01.jpg"/></div>
-						<div><img src="img/img_main/main_temple_01.jpg"/></div>
-				 		<div><img src="img/img_main/main_woman_01.jpg"/></div>  
-					</div>    
-				</div>                              	               
-			</div><!-- img slide end -->    
-			<!-- nowCampaign -->     
-			<div id="nowCampaign" class="rounded-lg my-4 w-full max-w-screen-xl my-0 mx-auto">  
-				<div class="mid_title">  
-					이 캠페인은 어떠세요? 
+				<div class="w-full my-0 mx-auto bg-gray-lighter">
+					<div class="slider single-item">
+						<div>
+							<img src="img/img_main/main_tree_01.jpg" alt="" />
+						</div>
+						<div>
+							<img src="img/img_main/main_temple_01.jpg" alt="" />
+						</div>
+						<div>
+							<img src="img/img_main/main_woman_01.jpg" alt="" />
+						</div>
+					</div>
 				</div>
-				<span id="mid_title_word" class="mid_title_word">
-					당신의 작은 <a href="#">#사랑</a>이 큰 도움이 됩니다 
-				</span>   
-				<!-- more 버튼 -->      
-				<div id="mainMoreDiv_01" class="absolute w-16"> 
-					<button id="moreButton" class="text-2xl"><a href="#">more</a></button>
-				</div>        
-				<!-- 이미지/프로젝트명/남은기간 -->     
-				<div id="mid_Div_Campaign" class="flex">      	   
-					<div id="mid_cam_01" class="my-16 mx-2 flex-initial w-1/3">  
-						<div class="mid_cam_img rounded-lg my-4 my-0 mx-auto border-solid border-4 border-gray">
-							<img src="img/img_main/main_temple_01.jpg"/> 
-						</div>     
-						       
-						<div class="mid_cam_name"> 
-							문화재 복원 캠페인!  
-						</div> 
-						   
-						<div class="flex pre_date rounded-lg mt-2 my-0 mx-auto">
-							<div class="mid-genre">  
-								자선캠페인 
-							</div>
-							<div class="mid_bar_div flex-initial">      
-								<div id="mid_emptyBar_01" class="relative border h-2 rounded">        
-									<div id="mid_colorBar_01" class="relative border bg-danger h-2 rounded"> 
-									</div>     
-								</div>    
-							</div>    
-							<div class="mid_D_day w-1/3 flex-initial" >  
-								<span class="percentage text-danger">50.00%</span><br/>
-								13일 남음  
-							</div>
-						</div>  
-					</div>
-					<div id="mid_cam_02" class="my-16 mx-2 flex-initial w-1/3">
-						<div class="mid_cam_img rounded-lg my-4 my-0 mx-auto border-solid border-4 border-gray">
-							<img src="img/img_main/main_tree_01.jpg"/>
-						</div> 
-						<div class="mid_cam_name"> 
-							나무를 심자!  
-						</div> 
-						   
-						<div class="flex pre_date rounded-lg mt-2 my-0 mx-auto">
-							<div class="mid-genre">  
-								자선캠페인 
-							</div>
-							<div class="mid_bar_div flex-initial">      
-								<div id="mid_emptyBar_02" class="relative border h-2 rounded">        
-									<div id="mid_colorBar_02" class="relative border bg-danger h-2 rounded"> 
-									</div>      
-								</div>    
-							</div>    
-							<div class="mid_D_day w-1/3 flex-initial" >  
-								<span class="percentage text-danger">85.00%</span><br/>
-								7일 남음  
-							</div> 
-						</div>  
-					</div>
-					<div id="mid_cam_03" class="my-16 mx-2 flex-initial w-1/3">
-						<div class="mid_cam_img rounded-lg my-4 my-0 mx-auto border-solid border-4 border-gray">
-							<img src="img/img_main/main_woman_01.jpg"/>
-						</div>  
-						<div class="mid_cam_name"> 
-							당신의 도움을 필요로 합니다!  
-						</div> 
-						   
-						<div class="flex pre_date rounded-lg mt-2 my-0 mx-auto"> 
-							<div class="mid-genre">  
-								자선캠페인 
-							</div>
-							<div class="mid_bar_div flex-initial">      
-								<div id="mid_emptyBar_03" class="relative border h-2 rounded">        
-									<div id="mid_colorBar_03" class="relative border bg-danger h-2 rounded"> 
-									</div>     
-								</div>    
-							</div>    
-							<div class="mid_D_day w-1/3 flex-initial">   
-								<span class="percentage text-danger">75.00%</span><br/>
-								21일 남음  
-							</div> 
-						</div>   
-					</div>  
-				</div>   
-			</div><!-- nowCampaign end --> 
-			  
-			<div id="pre_open_div" class="">    
-				주목하세요! 곧 오픈합니다!    
 			</div>
-			 
-			<span>
-				
-			</span>
-			<!-- otherCampaign start -->   
-			<div id="otherCampaign" class="my-4 flex w-full max-w-screen-xl my-0 mx-auto">   
-				 <!-- preCamDiv 오픈예정-->  
-				 <div id="preCamDiv" class="flex-initial w-2/3">
-				 	<!-- 오픈예정 캠페인 이미지, 캠페인명, 예정일 -->
-				 	<div id="main_carousel">     
-						<div id="carousel_Slick" class="flex">   
-							<div class="carousel_Div flex-initial mt-8"> 
-								<div class="carou_cam_img rounded-lg my-4 mx-auto">
-					      			<img src="img/img_List/africa.jpg"/>
-								</div>   
-						      
-								<div class="carou_cam_name rounded-lg my-0 mx-auto">
-									아프리카 지원 캠페인 
-								</div> 
-					    
-								<div id="date_01"  class="carou_cam_date rounded-lg mt-2 my-0 mx-auto">
-									2020-04-30<span id="re_01" class="remainDay text-danger"></span>  
-								</div> 	    
-							</div>         
-								     
-							<div class="carousel_Div flex-initial  mt-8"> 
-								<div class="carou_cam_img rounded-lg my-4 mx-auto">
-									<img src="img/img_List/dokdo.jpg"/>
-								</div>    
-						        
-								<div class="carou_cam_name rounded-lg my-0 mx-auto">
-									독도는 한국땅임.
-								</div> 
-					    
-								<div id="date_02" class="carou_cam_date rounded-lg mt-2 my-0 mx-auto ">
-									2020-06-26<span id="re_02" class="remainDay text-danger"></span>
-								</div> 	 	
-							</div> 
-							<div class="carousel_Div flex-initial mt-8"> 
-								<div class="carou_cam_img rounded-lg my-4 mx-auto">
-									<img src="img/img_List/boyukwon.jpg"/>	     
-								</div>  
-						     
-								<div class="carou_cam_name rounded-lg my-0 mx-auto">
-									아이가 먼저다.훠훠훠 
-								</div>  
-					        
-								<div id="date_03" class="carou_cam_date rounded-lg my-0 mx-auto"> 
-									2020-05-26 <span id="re_03" class="remainDay text-danger"></span>  
-								</div>       
-								  
-							</div>  
-							<div class="carousel_Div flex-initial mt-8"> 
-								<div class="carou_cam_img rounded-lg my-4 mx-auto">
-									<img src="img/img_List/culture.jpg"/>	        
-								</div>  
-						    
-								<div class="carou_cam_name rounded-lg my-0 mx-auto">
-									문화재 복원할거임. 암튼 할거임.
+			<!-- img slide end -->
+			<!-- nowCampaign -->
+			<div id="nowCampaign"
+				class="rounded-lg my-4 w-full max-w-screen-xl my-0 mx-auto">
+				<div id="mainMoreDiv_01" class="w-16">
+					<div class="mid_title">
+						이 캠페인은 어떠세요?<br /> <span id="mid_title_word"  
+							class="mid_title_word"> 당신의 작은 <a class="text-danger" href="#">#사랑</a>이 큰 도움이
+							됩니다 
+						</span>
+						<button id="moreButton" class="text-2xl border-b">
+							<a href="#">more</a>
+						</button>
+					</div>
+				</div>
+				<!-- 이미지/프로젝트명/남은기간 -->
+				<div id="mid_Div_Campaign" class="flex">
+					<div id="mid_cam_01" class="mx-2 flex-initial w-1/3">
+						<div
+							class="mid_cam_img rounded-lg my-4 my-0 mx-auto border-solid border-4 border-gray">
+							<img src="img/img_main/main_temple_01.jpg" alt="" />
+						</div>
+
+						<div class="mid_cam_name">문화재 복원 캠페인!</div>
+
+						<div class="flex pre_date rounded-lg mt-2 my-0 mx-auto">
+							<div class="mid-genre">자선캠페인</div>
+							<div class="mid_bar_div flex-initial">
+								<div id="mid_emptyBar_01" class="relative  h-2 rounded">
+									<div id="mid_colorBar_01"
+										class="relative bg-danger h-2 rounded"></div>
 								</div>
-					  
-								<div id="date_04" class="carou_cam_date rounded-lg mt-2 my-0 mx-auto ">
-									2020-05-27 <span id="re_04" class="remainDay text-danger "></span>
-								</div> 
-							</div>     
-						</div>	 			 	
-				 	</div>      
-				 </div>            
-				 <!-- deadlineDiv --> 
-				 <div id="deadlineDiv" class="flex-initial w-1/3">    
-				 	  <div id="dead_Line_Div" class="mt-2 text-2xl mt-8 text-center my-4 mx-auto">
-				 	  	끝이 가까워요!                
-				 	  </div>               
-				 	  <div id="dead_scroll_Div" class="w-full overflow-y-scroll">         
-				 		<div class="dead_scroll_box flex w-full">  
-				 			<div class="d_box mx-2  flex-initial w-2/3">	
-				 				<div class="d_camBar  w-full my-2 h-8">
-				 					<div id="d_emptyBar_01" class="relative mx-4 border h-2 rounded">        
-										<div id="d_colorBar_01" class="relative border bg-danger h-2 rounded"> 
-										</div>        
-									</div>       
-				 				</div>     
-				 				<div class="d_camName  w-full h-16">   
-				 					<span>75%</span> 
-				 				</div>  
-				 				<div class="d_camTitle w-full h-16"> 
-				 					사랑의 나눔  
-				 				</div>     
-				 			</div>    
-				 			<div class="d_Img  flex-initial w-1/3">
-				 				<a href="#"><img src="img/img_main/main_woman_01.jpg"/></a>
-				 			</div> 
-				 		</div>
-				 		 <div class="dead_scroll_box flex w-full">  
-				 			<div class="d_box mx-2  flex-initial w-2/3">	
-				 				<div class="d_camBar   w-full my-2 h-8">
-				 					<div id="d_emptyBar_02" class="relative mx-4 border h-2 rounded">        
-										<div id="d_colorBar_02" class="relative top-0 border bg-danger h-2 rounded"> 
-										</div>  
-									</div>
-				 				</div> 
-				 				<div class="d_camName  w-full h-16">   
-				 					<span>50%</span>
-				 				</div> 
-				 				<div class="d_camTitle w-full h-16"> 
-				 					문화재 복원 캠페인    
-				 				</div>  
-				 			</div>   
-				 			<div class="d_Img rounded-lg flex-initial w-1/3">
-								<a href="#"><img src="img/img_main/main_temple_01.jpg"/></a>
 							</div>
-				 		</div>
-				 		 <div class="dead_scroll_box flex w-full">  
-				 			<div class="d_box mx-2  flex-initial w-2/3">	
-				 				<div class="d_camBar w-full my-2 h-8">
-				 					<div id="d_emptyBar_03" class="relative mx-4 border h-2 rounded">        
-										<div id="d_colorBar_03" class="relative top-0 border bg-danger h-2 rounded"> 
-										</div>   
+							<div class="mid_D_day w-1/3 flex-initial">
+								<span class="percentage text-danger">50.00%</span><br /> 13일 남음
+							</div>
+						</div>
+					</div> 
+					<div id="mid_cam_02" class="mx-2 flex-initial w-1/3">
+						<div
+							class="mid_cam_img rounded-lg my-4 my-0 mx-auto border-solid border-4 border-gray">
+							<img src="img/img_main/main_tree_01.jpg" alt="" />
+						</div>
+						<div class="mid_cam_name">나무를 심자!</div>
+
+						<div class="flex pre_date rounded-lg mt-2 my-0 mx-auto">
+							<div class="mid-genre">자선캠페인</div>
+							<div class="mid_bar_div flex-initial">
+								<div id="mid_emptyBar_02" class="relative  h-2 rounded">
+									<div id="mid_colorBar_02"
+										class="relative  bg-danger h-2 rounded"></div>
+								</div>
+							</div>
+							<div class="mid_D_day w-1/3 flex-initial">
+								<span class="percentage text-danger">85.00%</span><br /> 7일 남음
+							</div>
+						</div>
+					</div>
+					<div id="mid_cam_03" class="mx-2 flex-initial w-1/3">
+						<div
+							class="mid_cam_img rounded-lg my-4 my-0 mx-auto border-solid border-4 border-gray">
+							<img src="img/img_main/main_woman_01.jpg" alt="" />
+						</div>
+						<div class="mid_cam_name">당신의 도움을 필요로 합니다!</div>
+
+						<div class="flex pre_date rounded-lg mt-2 my-0 mx-auto">
+							<div class="mid-genre">자선캠페인</div>
+							<div class="mid_bar_div flex-initial">
+								<div id="mid_emptyBar_03" class="relative  h-2 rounded">
+									<div id="mid_colorBar_03"
+										class="relative  bg-danger h-2 rounded"></div>
+								</div>
+							</div>
+							<div class="mid_D_day w-1/3 flex-initial">
+								<span class="percentage text-danger">75.00%</span><br /> 21일 남음
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- nowCampaign end -->
+
+			<!-- otherCampaign start -->
+			<div id="otherCampaign"
+				class="my-4 flex w-full max-w-screen-xl my-0 mx-auto">
+				<div id="pre_open_div" class="">
+					주목하세요! 곧 오픈합니다!<br /> <span id="mid_title_word_02"
+						class="mid_title_word"> 도움이 필요해요 <a  class="text-danger" href="#">#기쁨</a>을
+						나줘주세요.
+					</span>
+
+				</div>
+				<!-- preCamDiv 오픈예정-->
+				<div id="preCamDiv" class="flex-initial w-2/3">
+					<!-- 오픈예정 캠페인 이미지, 캠페인명, 예정일 -->
+					<div id="main_carousel">
+						<div id="carousel_Slick" class="flex">
+							<div class="carousel_Div flex-initial">
+								<div class="carou_cam_img rounded-lg my-4 mx-auto">
+									<img src="img/img_List/africa.jpg" alt="" />
+								</div>
+
+								<div class="carou_cam_name rounded-lg my-0 mx-auto">아프리카
+									지원 캠페인</div>
+
+								<div id="date_01"
+									class="carou_cam_date rounded-lg mt-2 my-0 mx-auto">
+									2020-04-30<span id="re_01" class="remainDay text-danger"></span>
+								</div>
+							</div>
+
+							<div class="carousel_Div flex-initial  mt-8">
+								<div class="carou_cam_img rounded-lg my-4 mx-auto">
+									<img src="img/img_List/dokdo.jpg" alt="" />
+								</div>
+
+								<div class="carou_cam_name rounded-lg my-0 mx-auto">독도는
+									한국땅임.</div>
+
+								<div id="date_02"
+									class="carou_cam_date rounded-lg mt-2 my-0 mx-auto ">
+									2020-06-26<span id="re_02" class="remainDay text-danger"></span>
+								</div>
+							</div>
+							<div class="carousel_Div flex-initial mt-8">
+								<div class="carou_cam_img rounded-lg my-4 mx-auto">
+									<img src="img/img_List/boyukwon.jpg" alt="" />
+								</div>
+
+								<div class="carou_cam_name rounded-lg my-0 mx-auto">아이가
+									먼저다.훠훠훠</div>
+
+								<div id="date_03" class="carou_cam_date rounded-lg my-0 mx-auto">
+									2020-05-26 <span id="re_03" class="remainDay text-danger"></span>
+								</div>
+
+							</div>
+							<div class="carousel_Div flex-initial mt-8">
+								<div class="carou_cam_img rounded-lg my-4 mx-auto">
+									<img src="img/img_List/culture.jpg" alt="" />
+								</div>
+
+								<div class="carou_cam_name rounded-lg my-0 mx-auto">문화재
+									복원할거임. 암튼 할거임.</div>
+
+								<div id="date_04"
+									class="carou_cam_date rounded-lg mt-2 my-0 mx-auto ">
+									2020-05-27 <span id="re_04" class="remainDay text-danger "></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- deadlineDiv -->
+				<div id="deadlineDiv" class="flex-initial w-1/3">
+					<div id="dead_Line_Div" class="mt-2 mt-8 my-4 mx-auto">
+						끝이 가까워요!<br /> <span id="mid_title_word" class="mid_title_word">
+							<a class="text-danger" href="#">#종료</a>임박! 어서오세요
+						</span>
+					</div>
+					<div id="dead_scroll_Div" class="w-full overflow-y-scroll">
+						<div class="dead_scroll_box flex w-full">
+							<div class="d_box mx-2  flex-initial w-2/3">
+								<div class="d_camBar  w-full my-2 h-8">
+									<div id="d_emptyBar_01"
+										class="relative mx-4  h-2 rounded">
+										<div id="d_colorBar_01"
+											class="relative  bg-danger h-2 rounded"></div>
 									</div>
-				 				</div>   
-				 				<div class="d_camName  w-full h-16">   
-				 					<span>85%</span>   
-				 				</div>   
-				 				<div class="d_camTitle w-full h-16"> 
-				 					사랑 나무 심기
-				 				</div>  
-				 			</div>   
-				 			<div class="d_Img rounded-lg flex-initial w-1/3">
-				 				<a href="#"><img src="img/img_List/tree.jpg"/></a>
-				 			</div>
-				 		</div>
-				 		 <div class="dead_scroll_box flex w-full">  
-				 			<div class="d_box mx-2 rounded-lg flex-initial w-2/3">	
-				 				<div class="d_camBar  w-full my-2 h-8">
-				 					<div id="d_emptyBar_04" class="relative mx-4 border h-2 rounded">        
-										<div id="d_colorBar_04" class="relative top-0 border bg-danger h-2 rounded"> 
-										</div>  
+								</div>
+								<div class="d_camName  w-full h-16">
+									<span>75%</span>
+								</div>
+								<div class="d_camTitle w-full h-16">사랑의 나눔</div>
+							</div>
+							<div class="d_Img  flex-initial w-1/3">
+								<a href="#"><img src="img/img_main/main_woman_01.jpg" alt="" /></a>
+							</div>
+						</div>
+						<div class="dead_scroll_box flex w-full">
+							<div class="d_box mx-2  flex-initial w-2/3">
+								<div class="d_camBar   w-full my-2 h-8">
+									<div id="d_emptyBar_02"
+										class="relative mx-4  h-2 rounded">
+										<div id="d_colorBar_02"
+											class="relative top-0  bg-danger h-2 rounded"></div>
 									</div>
-				 				</div> 
-				 				<div class="d_camName  w-full h-16">   
-				 					<span>15%</span> 
-				 				</div> 
-				 				<div class="d_camTitle w-full h-16"> 
-				 					사랑의 나눔   
-				 				</div>   
-				 			</div>   
-				 			<div class="d_Img rounded-lg flex-initial w-1/3">
-				 				<a href="#"><img src="img/img_List/africa.jpg"/></a>
-				 			</div> 
-				 		</div>
-				 		 <div class="dead_scroll_box flex w-full">  
-				 			<div class="d_box mx-2 rounded-lg flex-initial w-2/3">	
-				 				<div class="d_camBar w-full my-2 h-8">
-				 					<div id="d_emptyBar_05" class="relative mx-4 border h-2 rounded">        
-										<div id="d_colorBar_05" class="relative top-0 border bg-danger h-2 rounded"> 
-										</div>  
-									</div>  
-				 				</div> 
-				 				<div class="d_camName  w-full h-16">   
-				 					<span>45%</span>
-				 				</div>    
-				 				<div class="d_camTitle w-full h-16"> 
-				 					사랑의 나눔  
-				 				</div>     
-				 			</div>   
-				 			<div class="d_Img rounded-lg flex-initial w-1/3">
-				 				<a href="#"><img src="img/img_List/boyukwon.jpg"/></a> 
-				 			</div> 
-				 		</div>   	 
-				 	  </div>     
-				 </div>  	 
-			</div><!-- otherCampaign end -->  
-			<!-- siteReisterBanner start -->
-			   <a href="#">   
-				<div id="siteReisterBanner" class="my-8 w-full max-w-screen-xl my-0 mx-auto border-solid border-4 border-brand-dark ">
-					<div id="banner_ment_01" class="">
-						<span>ChariTree</span>에서 당신을 기다립니다.
-					</div>     
-					<div id="banner_ment_02" class="">
-						여러분의 따스한 관심을 나누어주세요.
-					</div>    
+								</div>
+								<div class="d_camName  w-full h-16">
+									<span>50%</span>
+								</div>
+								<div class="d_camTitle w-full h-16">문화재 복원 캠페인</div>
+							</div>
+							<div class="d_Img rounded-lg flex-initial w-1/3">
+								<a href="#"><img src="img/img_main/main_temple_01.jpg"
+									alt="" /></a>
+							</div>
+						</div>
+						<div class="dead_scroll_box flex w-full">
+							<div class="d_box mx-2  flex-initial w-2/3">
+								<div class="d_camBar w-full my-2 h-8">
+									<div id="d_emptyBar_03"
+										class="relative mx-4  h-2 rounded">
+										<div id="d_colorBar_03"
+											class="relative top-0  bg-danger h-2 rounded"></div>
+									</div>
+								</div>
+								<div class="d_camName  w-full h-16">
+									<span>85%</span>
+								</div>
+								<div class="d_camTitle w-full h-16">사랑 나무 심기</div>
+							</div>
+							<div class="d_Img rounded-lg flex-initial w-1/3">
+								<a href="#"><img src="img/img_List/tree.jpg" alt="" /></a>
+							</div>
+						</div>
+						<div class="dead_scroll_box flex w-full">
+							<div class="d_box mx-2 rounded-lg flex-initial w-2/3">
+								<div class="d_camBar  w-full my-2 h-8">
+									<div id="d_emptyBar_04"
+										class="relative mx-4  h-2 rounded">
+										<div id="d_colorBar_04"
+											class="relative top-0  bg-danger h-2 rounded"></div>
+									</div>
+								</div>
+								<div class="d_camName  w-full h-16">
+									<span>15%</span>
+								</div>
+								<div class="d_camTitle w-full h-16">사랑의 나눔</div>
+							</div>
+							<div class="d_Img rounded-lg flex-initial w-1/3">
+								<a href="#"><img src="img/img_List/africa.jpg" alt="" /></a>
+							</div>
+						</div>
+						<div class="dead_scroll_box flex w-full">
+							<div class="d_box mx-2 rounded-lg flex-initial w-2/3">
+								<div class="d_camBar w-full my-2 h-8">
+									<div id="d_emptyBar_05"
+										class="relative mx-4  h-2 rounded">
+										<div id="d_colorBar_05"
+											class="relative top-0  bg-danger h-2 rounded"></div>
+									</div>
+								</div>
+								<div class="d_camName  w-full h-16">
+									<span>45%</span>
+								</div>
+								<div class="d_camTitle w-full h-16">사랑의 나눔</div>
+							</div>
+							<div class="d_Img rounded-lg flex-initial w-1/3">
+								<a href="#"><img src="img/img_List/boyukwon.jpg" alt="" /></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- otherCampaign end -->
+
+ 
+
+  			
+			<div id="article_title" class="article_title">
+					최근 이슈<br/>  
+					<span id="article_mini_ment" class="article_mini_ment"> 
+					 	모두<a  class="text-danger" href="#"> #함께 </a>힘내요
+					</span>  
+			</div> 
+			<!-- 동영상 -->   
+			<div class="youtube flex w-full bg-gray-lightest"> 
+
+				<div class="youtube_ment_01 flex-initial">     
+					<span><a href="#">#코로나</a></span><br/> 
+					 당신의 도움이 필요합니다.<br/><br/>  
+					<div class="article bg-white"> 
+						<img src="img/img_main/main_article_01.PNG"/>  
+					</div> 
 					<a href="#">
-						<input type="button" id="resisterInput" class="bg-danger hover:bg-danger-light text-white font-bold py-2 px-4 border border-danger rounded" value="바로가기"/>
-					</a>  
-				</div><!-- siteReisterBanner end -->   
-			   </a>
-		</div> 
+					 	<input type="button" id="resisterInput_02" class="bg-danger hover:bg-danger-light text-white font-bold py-2 px-4 border border-danger rounded"value="바로가기" />
+					</a>    
+				</div>   
+  				    
+					<div id="player" class="my-16">
+						<div id="player_screen"> 
+							<iframe src="https://www.youtube.com/embed/tue73y7EpSA" width="600" height="400"> 
+							</iframe>
+						</div> 
+					</div>  
+			</div> 
+
+   			<!-- 위로 이동 -->  
+			<div class="page_up_div text-4xl border border-gray text-center rounded-full h-16 w-16 ">
+					<a href="#"><i class="xi-valign-top text-danger leading-2"></i></a>  
+			</div>         
+    
+    
+
+  
+ 
+			<!-- siteReisterBanner start -->
+			<div id="siteReisterBanner"
+				class="w-full max-w-screen-xl my-0 mx-auto">
+				<div id="banner_ment_01" class="">
+					<span>ChariTree</span>에서 당신을 기다립니다.
+				</div>
+				<div id="banner_ment_02" class="">여러분의 따스한 관심을 나누어주세요.</div>
+				<a href="#"> <input type="button" id="resisterInput"
+					class="bg-danger hover:bg-danger-light text-white font-bold py-2 px-4 border border-danger rounded"
+					value="바로가기" />
+				</a>
+			</div> 
+			<!-- siteReisterBanner end -->
+
+		</div>
+		<!-- content end -->
 		<!---------------------------------------------->
 		<!---------------------------------------------->
 		<footer id="footer" class="bg-gray-darkest text-gray text-sm">
 			<div class="footer-menu w-full bg-gray-dark">
-				<div class="w-full max-w-screen-xl my-0 mx-auto flex justify-between text-white px-8 xl:px-0">
+				<div
+					class="w-full max-w-screen-xl my-0 mx-auto flex justify-between text-white px-8 xl:px-0">
 					<div>
-						<a href="/project_Ma/terms/tos.html" class="inline-block py-4 mr-8">이용약관</a>
-						<a href="/project_Ma/terms/private.html" class="inline-block py-4">개인정보 처리방침</a>
+						<a href="/project_Ma/terms/tos.html"
+							class="inline-block py-4 mr-8">이용약관</a> <a
+							href="/project_Ma/terms/private.html" class="inline-block py-4">개인정보
+							처리방침</a>
 					</div>
 					<div>
-						<a href="/project_Ma/contact/contact.html" class="inline-block py-4 mr-8">고객센터</a>
-						<a href="/project_Ma/news/notice.html" class="inline-block py-4">공지사항</a>
-					</div>   
+						<a href="/project_Ma/contact/contact.html"
+							class="inline-block py-4 mr-8">고객센터</a> <a
+							href="/project_Ma/news/notice.html" class="inline-block py-4">공지사항</a>
+					</div>
 				</div>
 			</div>
-			<div class="w-full max-w-screen-xl my-0 mx-auto flex justify-between mt-8 px-8 xl:px-0">
+			<div
+				class="w-full max-w-screen-xl my-0 mx-auto flex justify-between mt-8 px-8 xl:px-0">
 				<div>
-					<p>서울 마포구 백범로 23 구프라자 3층 | 사업자 이영범 | 사업등록번호 000-00-00000<br/>
-						TEL 02-0000-0000 | FAX 02-0000-0000 | E-mail test@test.or.kr</p>
+					<p>
+						서울 마포구 백범로 23 구프라자 3층 | 사업자 이영범 | 사업등록번호 000-00-00000<br /> TEL
+						02-0000-0000 | FAX 02-0000-0000 | E-mail test@test.or.kr
+					</p>
 				</div>
 				<div class="text-right">
-					<a href="/project_Ma/index.html"><img class="w-64" src="img/chariTree_logo_footer.png"></a>
+					<a href="/project_Ma/index.html"><img class="w-64"
+						src="img/chariTree_logo_footer.png" alt=""></a>
 				</div>
 			</div>
-			<div class="w-full max-w-screen-xl my-0 mx-auto py-8 px-8 xl:px-0 text-xs">
-				<span class="mr-2">Copyright©2020 BitCamp All right reserved.</span><span>아이콘 제작자 <a href="https://www.flaticon.com/kr/authors/smalllikeart" title="smalllikeart">smalllikeart</a> from <a href="https://www.flaticon.com/kr/" title="Flaticon">www.flaticon.com</a></span>
+			<div
+				class="w-full max-w-screen-xl my-0 mx-auto py-8 px-8 xl:px-0 text-xs">
+				<span class="mr-2">Copyright©2020 BitCamp All right reserved.</span><span>아이콘
+					제작자 <a href="https://www.flaticon.com/kr/authors/smalllikeart"
+					title="smalllikeart">smalllikeart</a> from <a
+					href="https://www.flaticon.com/kr/" title="Flaticon">www.flaticon.com</a>
+				</span>
 			</div>
 		</footer>
-		<div id="searchModal" class="modal w-full h-screen bg-black opacity-75 fixed top-0 z-50 hidden">
-			<div class="close text-white inline-block text-xl absolute top-0 right-0 p-4 cursor-pointer"><i class="xi-close"></i></div>
-			<form method="GET" id="searchForm" class="w-full max-w-sm">
+		<div id="searchModal"
+			class="modal w-full h-screen bg-black opacity-75 fixed top-0 z-50 hidden">
+			<div
+				class="close text-white inline-block text-xl absolute top-0 right-0 p-4 cursor-pointer">
+				<i class="xi-close"></i>
+			</div>
+			<form method="GET" id="searchForm" class="w-full max-w-sm" action="">
 				<div class="flex items-center border-b border-b-2 border-white py-2">
-					<input class="appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" name="search_text" placeholder="검색" aria-label="Full name">
-					<button class="flex-shrink-0 text-white py-1 px-2" id="searchSubmit"><i class="xi-search"></i></button>
-				</div>
+					<input
+						class="appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none"
+						type="text" name="search_text" placeholder="검색"
+						aria-label="Full name">
+					<button class="flex-shrink-0 text-white py-1 px-2"
+						id="searchSubmit">
+						<i class="xi-search"></i>
+					</button>
+				</div> 
 			</form>
-		</div> 
+		</div>
 	</div>
 	<!---------------------------------------------->
 	<!---------------------------------------------->
-	<!-- main js --> 
+	<!-- main js -->
 	<script src="/project_Ma/js/main.js" type="text/javascript"></script>
 </body>
 </html>
